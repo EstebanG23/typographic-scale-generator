@@ -103,9 +103,9 @@
   @include mdc-drawer-fill-color-accessible(secondary);
   // Drawer defaults to a higher z-index, but we aren't overlaying it over anything
   @include mdc-drawer-z-index(0);
-
-
   width: 500px;
+  resize: horizontal;
+  
 
   .mdc-list {
     margin: 70px 5px auto 5px;
@@ -114,6 +114,10 @@
   .mdc-list-item {
     border-radius: 6px;
     justify-content: center;
+  }
+
+  .mdc-text-field {
+    width: 100%;
   }
 
   // This needs 3-class specificity to override MDC Drawer styles
