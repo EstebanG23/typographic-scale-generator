@@ -4,7 +4,7 @@ import { MDCSelect } from '@material/select';
 import FontMetrics from 'fontmetrics'
 import {MDCRipple} from '@material/ripple';
 import {MDCTextField} from '@material/textfield';
-// import { TYPOGRAPHY } from './type-vars';
+import { typography } from './type-vars';
 
 const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
 const textField2 = new MDCTextField(document.querySelector('.mdc-text-field2'));
@@ -74,22 +74,6 @@ const otypeface = new MDCSelect(document.querySelector('.otypeface'));
 const oweight = new MDCSelect(document.querySelector('.oweight'));
 const osize = new MDCTextField(document.querySelector('.osize'));
 const otracking = new MDCTextField(document.querySelector('.otracking'));
-
-const SIZE_DEFAULTS_BY_TEXT_TYPE = {
-    h1: 96,
-    h2: 60,
-    h3: 48,
-    h4: 34,
-    h5: 24,
-    h6: 20,
-    body1: 16,
-    body2: 14,
-    button: 14,
-    caption: 12,
-    overline: 10,
-    subtitle1: 16,
-    subtitle2: 14,
-};
 
 const ROBOTO_X_HEIGHT_FRACTION = FontMetrics({fontFamily: 'Roboto'}).xHeight;
 
@@ -178,7 +162,8 @@ function myFunction(e) {
             fontFamily: e.currentTarget.children[1].innerText,
         });
         let textType = el.id;
-        const adjustedFont = getAdjustmentFactor(font, SIZE_DEFAULTS_BY_TEXT_TYPE[textType].size)
+        console.log(typography)
+        const adjustedFont = getAdjustmentFactor(font, typography[textType].size)
         console.log(adjustedFont);
 
         el.style.fontSize = adjustedFont + 'px';
@@ -194,7 +179,7 @@ function myFunction2(e) {
             fontFamily: e.currentTarget.children[1].innerText,
         });
         let textType = el.id;
-        const adjustedFont = getAdjustmentFactor(font, SIZE_DEFAULTS_BY_TEXT_TYPE[textType])
+        const adjustedFont = getAdjustmentFactor(font, typography[textType].size)
         console.log(adjustedFont);
 
         el.style.fontSize = adjustedFont + 'px';

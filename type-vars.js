@@ -1,4 +1,4 @@
-export default TYPOGRAPHY = {
+export const typography = {
     h1: {
         typeface: 'Roboto',
         size: 96,
