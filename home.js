@@ -78,67 +78,54 @@ const otracking = new MDCTextField(document.querySelector('.otracking'));
 const ROBOTO_X_HEIGHT_FRACTION = FontMetrics({fontFamily: 'Roboto'}).xHeight;
 
 h1typeface.listen('MDCSelect:change', () => {
-    console.log(h1typeface.root_.parentNode.parentNode);
     h1typeface.root_.parentNode.parentNode.style.fontFamily = h1typeface.value;
 });
 
 h2typeface.listen('MDCSelect:change', () => {
-    console.log(h2typeface.root_.parentNode.parentNode);
     h2typeface.root_.parentNode.parentNode.style.fontFamily = h2typeface.value;
 });
 
 h3typeface.listen('MDCSelect:change', () => {
-    console.log(h3typeface.root_.parentNode.parentNode);
     h3typeface.root_.parentNode.parentNode.style.fontFamily = h3typeface.value;
 });
 
 h4typeface.listen('MDCSelect:change', () => {
-    console.log(h4typeface.root_.parentNode.parentNode);
     h4typeface.root_.parentNode.parentNode.style.fontFamily = h4typeface.value;
 });
 
 h5typeface.listen('MDCSelect:change', () => {
-    console.log(h5typeface.root_.parentNode.parentNode);
     h5typeface.root_.parentNode.parentNode.style.fontFamily = h5typeface.value;
 });
 
 h6typeface.listen('MDCSelect:change', () => {
-    console.log(h6typeface.root_.parentNode.parentNode);
     h6typeface.root_.parentNode.parentNode.style.fontFamily = h6typeface.value;
 });
 
 s1typeface.listen('MDCSelect:change', () => {
-    console.log(s1typeface.root_.parentNode.parentNode);
     s1typeface.root_.parentNode.parentNode.style.fontFamily = s1typeface.value;
 });
 
 s2typeface.listen('MDCSelect:change', () => {
-    console.log(s2typeface.root_.parentNode.parentNode);
     s2typeface.root_.parentNode.parentNode.style.fontFamily = s2typeface.value;
 });
 
 body1typeface.listen('MDCSelect:change', () => {
-    console.log(body1typeface.root_.parentNode.parentNode);
     body1typeface.root_.parentNode.parentNode.style.fontFamily = body1typeface.value;
 });
 
 body2typeface.listen('MDCSelect:change', () => {
-    console.log(body2typeface.root_.parentNode.parentNode);
     body2typeface.root_.parentNode.parentNode.style.fontFamily = body2typeface.value;
 });
 
 btypeface.listen('MDCSelect:change', () => {
-    console.log(btypeface.root_.parentNode.parentNode);
     btypeface.root_.parentNode.parentNode.style.fontFamily = btypeface.value;
 });
 
 ctypeface.listen('MDCSelect:change', () => {
-    console.log(ctypeface.root_.parentNode.parentNode);
     ctypeface.root_.parentNode.parentNode.style.fontFamily = ctypeface.value;
 });
 
 otypeface.listen('MDCSelect:change', () => {
-    console.log(otypeface.root_.parentNode.parentNode);
     otypeface.root_.parentNode.parentNode.style.fontFamily = otypeface.value;
 });
 
@@ -162,9 +149,7 @@ function myFunction(e) {
             fontFamily: e.currentTarget.children[1].innerText,
         });
         let textType = el.id;
-        console.log(typography)
         const adjustedFont = getAdjustmentFactor(font, typography[textType].size)
-        console.log(adjustedFont);
 
         el.style.fontSize = adjustedFont + 'px';
         el.style.fontFamily = e.currentTarget.children[1].innerText;
@@ -180,7 +165,6 @@ function myFunction2(e) {
         });
         let textType = el.id;
         const adjustedFont = getAdjustmentFactor(font, typography[textType].size)
-        console.log(adjustedFont);
 
         el.style.fontSize = adjustedFont + 'px';
         el.style.fontFamily = e.currentTarget.children[1].innerText;
