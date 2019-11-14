@@ -4,6 +4,7 @@ import { MDCSelect } from '@material/select';
 import FontMetrics from 'fontmetrics'
 import {MDCRipple} from '@material/ripple';
 import {MDCTextField} from '@material/textfield';
+// import { TYPOGRAPHY } from './type-vars';
 
 const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
 const textField2 = new MDCTextField(document.querySelector('.mdc-text-field2'));
@@ -49,15 +50,15 @@ const s2weight = new MDCSelect(document.querySelector('.s2weight'));
 const s2size = new MDCTextField(document.querySelector('.s2size'));
 const s2tracking = new MDCTextField(document.querySelector('.s2tracking'));
 
-const b1typeface = new MDCSelect(document.querySelector('.b1typeface'));
-const b1weight = new MDCSelect(document.querySelector('.b1weight'));
-const b1size = new MDCTextField(document.querySelector('.b1size'));
-const b1tracking = new MDCTextField(document.querySelector('.b1tracking'));
+const body1typeface = new MDCSelect(document.querySelector('.body1typeface'));
+const body1weight = new MDCSelect(document.querySelector('.body1weight'));
+const body1size = new MDCTextField(document.querySelector('.body1size'));
+const body1tracking = new MDCTextField(document.querySelector('.body1tracking'));
 
-const b2typeface = new MDCSelect(document.querySelector('.b2typeface'));
-const b2weight = new MDCSelect(document.querySelector('.b2weight'));
-const b2size = new MDCTextField(document.querySelector('.b2size'));
-const b2tracking = new MDCTextField(document.querySelector('.b2tracking'));
+const body2typeface = new MDCSelect(document.querySelector('.body2typeface'));
+const body2weight = new MDCSelect(document.querySelector('.body2weight'));
+const body2size = new MDCTextField(document.querySelector('.body2size'));
+const body2tracking = new MDCTextField(document.querySelector('.body2tracking'));
 
 const btypeface = new MDCSelect(document.querySelector('.btypeface'));
 const bweight = new MDCSelect(document.querySelector('.bweight'));
@@ -81,8 +82,8 @@ const SIZE_DEFAULTS_BY_TEXT_TYPE = {
     h4: 34,
     h5: 24,
     h6: 20,
-    b1: 16,
-    b2: 14,
+    body1: 16,
+    body2: 14,
     button: 14,
     caption: 12,
     overline: 10,
@@ -132,14 +133,14 @@ s2typeface.listen('MDCSelect:change', () => {
     s2typeface.root_.parentNode.parentNode.style.fontFamily = s2typeface.value;
 });
 
-b1typeface.listen('MDCSelect:change', () => {
-    console.log(b1typeface.root_.parentNode.parentNode);
-    b1typeface.root_.parentNode.parentNode.style.fontFamily = b1typeface.value;
+body1typeface.listen('MDCSelect:change', () => {
+    console.log(body1typeface.root_.parentNode.parentNode);
+    body1typeface.root_.parentNode.parentNode.style.fontFamily = body1typeface.value;
 });
 
-b2typeface.listen('MDCSelect:change', () => {
-    console.log(b2typeface.root_.parentNode.parentNode);
-    b2typeface.root_.parentNode.parentNode.style.fontFamily = b2typeface.value;
+body2typeface.listen('MDCSelect:change', () => {
+    console.log(body2typeface.root_.parentNode.parentNode);
+    body2typeface.root_.parentNode.parentNode.style.fontFamily = body2typeface.value;
 });
 
 btypeface.listen('MDCSelect:change', () => {
@@ -177,7 +178,7 @@ function myFunction(e) {
             fontFamily: e.currentTarget.children[1].innerText,
         });
         let textType = el.id;
-        const adjustedFont = getAdjustmentFactor(font, SIZE_DEFAULTS_BY_TEXT_TYPE[textType])
+        const adjustedFont = getAdjustmentFactor(font, SIZE_DEFAULTS_BY_TEXT_TYPE[textType].size)
         console.log(adjustedFont);
 
         el.style.fontSize = adjustedFont + 'px';
