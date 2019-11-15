@@ -4,6 +4,7 @@ import { MDCSelect } from '@material/select';
 import FontMetrics from 'fontmetrics'
 import {MDCRipple} from '@material/ripple';
 import {MDCTextField} from '@material/textfield';
+import { typography } from './type-vars';
 
 const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
 const textField2 = new MDCTextField(document.querySelector('.mdc-text-field2'));
@@ -49,15 +50,15 @@ const s2weight = new MDCSelect(document.querySelector('.s2weight'));
 const s2size = new MDCTextField(document.querySelector('.s2size'));
 const s2tracking = new MDCTextField(document.querySelector('.s2tracking'));
 
-const b1typeface = new MDCSelect(document.querySelector('.b1typeface'));
-const b1weight = new MDCSelect(document.querySelector('.b1weight'));
-const b1size = new MDCTextField(document.querySelector('.b1size'));
-const b1tracking = new MDCTextField(document.querySelector('.b1tracking'));
+const body1typeface = new MDCSelect(document.querySelector('.body1typeface'));
+const body1weight = new MDCSelect(document.querySelector('.body1weight'));
+const body1size = new MDCTextField(document.querySelector('.body1size'));
+const body1tracking = new MDCTextField(document.querySelector('.body1tracking'));
 
-const b2typeface = new MDCSelect(document.querySelector('.b2typeface'));
-const b2weight = new MDCSelect(document.querySelector('.b2weight'));
-const b2size = new MDCTextField(document.querySelector('.b2size'));
-const b2tracking = new MDCTextField(document.querySelector('.b2tracking'));
+const body2typeface = new MDCSelect(document.querySelector('.body2typeface'));
+const body2weight = new MDCSelect(document.querySelector('.body2weight'));
+const body2size = new MDCTextField(document.querySelector('.body2size'));
+const body2tracking = new MDCTextField(document.querySelector('.body2tracking'));
 
 const btypeface = new MDCSelect(document.querySelector('.btypeface'));
 const bweight = new MDCSelect(document.querySelector('.bweight'));
@@ -74,86 +75,57 @@ const oweight = new MDCSelect(document.querySelector('.oweight'));
 const osize = new MDCTextField(document.querySelector('.osize'));
 const otracking = new MDCTextField(document.querySelector('.otracking'));
 
-const SIZE_DEFAULTS_BY_TEXT_TYPE = {
-    h1: 96,
-    h2: 60,
-    h3: 48,
-    h4: 34,
-    h5: 24,
-    h6: 20,
-    b1: 16,
-    b2: 14,
-    button: 14,
-    caption: 12,
-    overline: 10,
-    subtitle1: 16,
-    subtitle2: 14,
-};
-
 const ROBOTO_X_HEIGHT_FRACTION = FontMetrics({fontFamily: 'Roboto'}).xHeight;
 
 h1typeface.listen('MDCSelect:change', () => {
-    console.log(h1typeface.root_.parentNode.parentNode);
     h1typeface.root_.parentNode.parentNode.style.fontFamily = h1typeface.value;
 });
 
 h2typeface.listen('MDCSelect:change', () => {
-    console.log(h2typeface.root_.parentNode.parentNode);
     h2typeface.root_.parentNode.parentNode.style.fontFamily = h2typeface.value;
 });
 
 h3typeface.listen('MDCSelect:change', () => {
-    console.log(h3typeface.root_.parentNode.parentNode);
     h3typeface.root_.parentNode.parentNode.style.fontFamily = h3typeface.value;
 });
 
 h4typeface.listen('MDCSelect:change', () => {
-    console.log(h4typeface.root_.parentNode.parentNode);
     h4typeface.root_.parentNode.parentNode.style.fontFamily = h4typeface.value;
 });
 
 h5typeface.listen('MDCSelect:change', () => {
-    console.log(h5typeface.root_.parentNode.parentNode);
     h5typeface.root_.parentNode.parentNode.style.fontFamily = h5typeface.value;
 });
 
 h6typeface.listen('MDCSelect:change', () => {
-    console.log(h6typeface.root_.parentNode.parentNode);
     h6typeface.root_.parentNode.parentNode.style.fontFamily = h6typeface.value;
 });
 
 s1typeface.listen('MDCSelect:change', () => {
-    console.log(s1typeface.root_.parentNode.parentNode);
     s1typeface.root_.parentNode.parentNode.style.fontFamily = s1typeface.value;
 });
 
 s2typeface.listen('MDCSelect:change', () => {
-    console.log(s2typeface.root_.parentNode.parentNode);
     s2typeface.root_.parentNode.parentNode.style.fontFamily = s2typeface.value;
 });
 
-b1typeface.listen('MDCSelect:change', () => {
-    console.log(b1typeface.root_.parentNode.parentNode);
-    b1typeface.root_.parentNode.parentNode.style.fontFamily = b1typeface.value;
+body1typeface.listen('MDCSelect:change', () => {
+    body1typeface.root_.parentNode.parentNode.style.fontFamily = body1typeface.value;
 });
 
-b2typeface.listen('MDCSelect:change', () => {
-    console.log(b2typeface.root_.parentNode.parentNode);
-    b2typeface.root_.parentNode.parentNode.style.fontFamily = b2typeface.value;
+body2typeface.listen('MDCSelect:change', () => {
+    body2typeface.root_.parentNode.parentNode.style.fontFamily = body2typeface.value;
 });
 
 btypeface.listen('MDCSelect:change', () => {
-    console.log(btypeface.root_.parentNode.parentNode);
     btypeface.root_.parentNode.parentNode.style.fontFamily = btypeface.value;
 });
 
 ctypeface.listen('MDCSelect:change', () => {
-    console.log(ctypeface.root_.parentNode.parentNode);
     ctypeface.root_.parentNode.parentNode.style.fontFamily = ctypeface.value;
 });
 
 otypeface.listen('MDCSelect:change', () => {
-    console.log(otypeface.root_.parentNode.parentNode);
     otypeface.root_.parentNode.parentNode.style.fontFamily = otypeface.value;
 });
 
@@ -177,8 +149,7 @@ function myFunction(e) {
             fontFamily: e.currentTarget.children[1].innerText,
         });
         let textType = el.id;
-        const adjustedFont = getAdjustmentFactor(font, SIZE_DEFAULTS_BY_TEXT_TYPE[textType])
-        console.log(adjustedFont);
+        const adjustedFont = getAdjustmentFactor(font, typography[textType].size)
 
         el.style.fontSize = adjustedFont + 'px';
         el.style.fontFamily = e.currentTarget.children[1].innerText;
@@ -193,8 +164,7 @@ function myFunction2(e) {
             fontFamily: e.currentTarget.children[1].innerText,
         });
         let textType = el.id;
-        const adjustedFont = getAdjustmentFactor(font, SIZE_DEFAULTS_BY_TEXT_TYPE[textType])
-        console.log(adjustedFont);
+        const adjustedFont = getAdjustmentFactor(font, typography[textType].size)
 
         el.style.fontSize = adjustedFont + 'px';
         el.style.fontFamily = e.currentTarget.children[1].innerText;
