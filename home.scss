@@ -23,22 +23,22 @@
   margin-bottom: 20px;
 }
 
-.select-container{
+.select-container {
   margin: 10px 16px;
-  .mdc-text-field{
+  .mdc-text-field {
     width: 450px;
   }
 }
 
-.type-scale-buttons{
+.type-scale-buttons {
   display: none;
 }
 
-.font-radio{
+.font-radio {
   display: none;
 }
 
-.font-radio:checked + .font-option{
+.font-radio:checked + .font-option {
   background-color: #fefe8d;
   border-color: black;
 }
@@ -59,7 +59,7 @@ main {
   display: flex;
 }
 
-.selected-font{
+.selected-font {
   background-color: #fefe8d;
   border-color: black;
 }
@@ -88,7 +88,7 @@ main {
   resize: horizontal;
   border-left-width: 1px;
   border-left-style: solid;
-  
+
   .mdc-list {
     margin: 70px 5px auto 5px;
   }
@@ -113,23 +113,23 @@ main {
   overflow: auto;
 }
 
-.primary-font-header{
+.primary-font-header {
   display: inline-block;
   margin: 16px 4px 16px 16px;
   color: rgba(0, 0, 0, 0.87);
 }
 
-.font-header-container{
+.font-header-container {
   display: flex;
 
-  .info-icon{
+  .info-icon {
     align-self: center;
     margin-top: -4px;
     color: lightgray;
   }
 }
 
-.or{
+.or {
   margin: 0 0 10px 16px;
 }
 
@@ -144,7 +144,7 @@ main {
   border: solid 1px lightgray;
   color: black;
   border-radius: 6px;
-  padding: 20px ;
+  padding: 20px;
   font-size: 14px;
 
   /* Position the tooltip */
@@ -157,13 +157,13 @@ main {
   visibility: visible;
 }
 
-.primary-font{
+.primary-font {
   display: flex;
   flex-direction: row;
   margin: 0px 11px 10px;
   flex-flow: wrap;
 
-  .font-option{
+  .font-option {
     width: 80px;
     height: 80px;
     text-align: center;
@@ -174,35 +174,35 @@ main {
     display: flex;
     flex-direction: column;
 
-    &:hover{
+    &:hover {
       background-color: lightgrey;
     }
   }
 
-  .font-option-spacer{
+  .font-option-spacer {
     flex-grow: 1;
   }
 
-  .font-example{
+  .font-example {
     margin: auto;
     font-size: 23px;
     flex-grow: 1;
     display: inline-table;
   }
 
-  .font-name{
+  .font-name {
     margin-bottom: 14px;
     font-size: 12px;
   }
 }
 
-.main-content{
+.main-content {
   display: flex;
   flex-direction: column;
   padding: 25px;
   margin: 0 auto 0 0;
 
-  .type-scale-item{
+  .type-scale-item {
     display: flex;
     flex-direction: column;
     border-bottom: solid 1px lightgrey;
@@ -210,22 +210,21 @@ main {
     padding-top: 20px;
   }
 
-  .type-scale-variable{
+  .type-scale-variable {
     min-width: 270px;
     display: flex;
 
-    span{
+    span {
       margin: auto 0;
       font-family: monospace;
     }
   }
 
-  .type-scale-example{
+  .type-scale-example {
     display: flex;
     flex-direction: column;
-    width: 80%;
 
-    span{
+    span {
       align-self: flex-end;
       white-space: nowrap;
       overflow: hidden;
@@ -235,31 +234,31 @@ main {
   }
 }
 
-.top-bar{
+.top-bar {
   display: flex;
   width: 100%;
   height: 80px;
   border-bottom: lightgray 1px solid;
 }
 
-.top-bar-header{
+.top-bar-header {
   align-self: center;
   margin: 0 0 0 16px;
   width: 500px;
   font-size: 26px;
 }
 
-.top-bar-button{
+.top-bar-button {
   align-self: center;
 }
 
-.drawer-content-header{
+.drawer-content-header {
   margin: 20px 0 10px 16px;
   font-size: 18px;
   display: block;
   font-weight: bold;
 }
 
-.font-selection-section.second{
+.font-selection-section.second {
   margin-top: 55px;
 }

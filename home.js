@@ -8,7 +8,6 @@ import { typography } from './type-vars';
 const primaryTypeSelect = new MDCSelect(document.querySelector('.primary-type-select'));
 const secondaryTypeSelect = new MDCSelect(document.querySelector('.secondary-type-select'));
 
-
 const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
 const textField2 = new MDCTextField(document.querySelector('.mdc-text-field2'));
 const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
