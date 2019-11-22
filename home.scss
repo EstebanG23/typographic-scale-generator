@@ -30,7 +30,7 @@
   }
 }
 
-.type-scale-buttons {
+.type-scale-meta {
   display: none;
 }
 
@@ -51,7 +51,7 @@
   display: none;
 }
 
-.expansion-radio:checked + .type-scale-buttons {
+.expansion-radio:checked + .type-scale-meta {
   display: flex;
 }
 
@@ -84,7 +84,9 @@ main {
 }
 
 .meta-drawer {
-  width: 200px;
+  width: 230px;
+  display: flex;
+  align-items: center;
   resize: horizontal;
   border-left-width: 1px;
   border-left-style: solid;
