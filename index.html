@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shrine (MDC Web Example App)</title>
+  <title>Material Type Scale Generator</title>
   <link rel="shortcut icon" href="https://material.io/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="stylesheet"
@@ -14,188 +14,8 @@
 </head>
 
 <body style="display: flex; flex-direction: column;">
-  <div class="top-bar">
-    <span class="top-bar-header">Typographic scale generator</span>
-    <div class="top-bar-button">
-      <button class="mdc-button mdc-button--outlined">
-        <span class="mdc-button__label">EXPORT TYPE SCALE</span>
-      </button>
-    </div>
-  </div>
-  <div class="home">
-    <aside class="mdc-drawer shrine-drawer">
-      <div class="mdc-drawer__content">
-        <span class="drawer-content-header">Pick a typeface</span>
-        <div class="font-selection-section">
-          <div class="font-header-container">
-            <span class="primary-font-header">Headlines & Subtitles</span>
-            <div class="tooltip">
-              <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path fill="none" d="M0 0h24v24H0V0z" />
-                <path
-                  d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-              </svg>
-              <span class="tooltiptext">In the type scale, headlines span from a range of 1 through 6. Headlines are the
-                largest text on the screen, reserved for short, important text or numerals. <br><br> For headlines, you
-                can choose an expressive font, such as a display, handwritten, or script style. These unconventionals
-                font designs have details and intricacy that help attract the eye.
-              </span>
-            </div>
-          </div>
-          <div class="primary-font">
-            <label for="hroboto" class="expansion-control">
-              <input type="radio" id="hroboto" name="exp2" class="font-radio" checked>
-              <div class="font-option heading-option">
-                <div class="font-example" style="font-family: 'Roboto';">
-                  Aa
-                </div>
-                <div class="font-name">
-                  Roboto
-                </div>
-              </div>
-            </label>
-            <label for="hmontserrat" class="expansion-control">
-              <input type="radio" id="hmontserrat" name="exp2" class="font-radio">
-              <div class="font-option heading-option">
-                <div class="font-example" style="font-family: 'Montserrat';">
-                  Aa
-                </div>
-                <div class="font-name">
-                  Montserrat
-                </div>
-              </div>
-            </label>
-            <label for="hshrikhand" class="expansion-control">
-              <input type="radio" id="hshrikhand" name="exp2" class="font-radio">
-              <div class="font-option heading-option">
-                <div class="font-example" style="font-family: 'Shrikhand';">
-                  Aa
-                </div>
-                <div class="font-name">
-                  Shrikhand
-                </div>
-              </div>
-            </label>
-            <label for="hraleway" class="expansion-control">
-              <input type="radio" id="hraleway" name="exp2" class="font-radio">
-              <div class="font-option heading-option">
-                <div class="font-example" style="font-family: 'Raleway';">
-                  Aa
-                </div>
-                <div class="font-name">
-                  Raleway
-                </div>
-              </div>
-            </label>
-            <label for="hnotosans" class="expansion-control">
-              <input type="radio" id="hnotosans" name="exp2" class="font-radio">
-              <div class="font-option heading-option">
-                <div class="font-example" style="font-family: 'Noto Sans';">
-                  Aa
-                </div>
-                <div class="font-name">
-                  Noto Sans
-                </div>
-              </div>
-            </label>
-
-          </div>
-          <span class="or">or</span>
-          <div class="select-container">
-            <div class="mdc-text-field">
-              <input class="mdc-text-field__input" id="text-field-hero-input">
-              <div class="mdc-line-ripple"></div>
-              <label for="text-field-hero-input" class="mdc-floating-label">Search Google Fonts...</label>
-            </div>
-          </div>
-        </div>
-        <div class="font-selection-section second">
-          <div class="font-header-container">
-            <span class="primary-font-header">Body & Captions</span>
-            <div class="tooltip">
-              <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path fill="none" d="M0 0h24v24H0V0z" />
-                <path
-                  d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-              </svg>
-              <span class="tooltiptext">In the type scale, Body, captions, & overlines are used to display the majority
-                of information in a screen, and have to be readable at small sizes. We recommend using a font that has
-                multiple weights, and works well at small sizes.
-                <br><br>
-                Body text comes in ranges 1-2, and it’s typically used for long-form writing as it works well for small
-                text sizes. For longer sections of text, a serif or sans serif typeface is recommended.
-              </span>
-            </div>
-          </div>
-          <div class="primary-font">
-            <label for="broboto" class="expansion-control">
-              <input type="radio" id="broboto" name="exp3" class="font-radio" checked>
-              <div class="font-option body-option">
-                <div class="font-example" style="font-family: 'Roboto';">
-                  Aa
-                </div>
-                <div class="font-name">
-                  Roboto
-                </div>
-              </div>
-            </label>
-            <label for="bchivo" class="expansion-control">
-              <input type="radio" id="bchivo" name="exp3" class="font-radio">
-              <div class="font-option body-option">
-                <div class="font-example" style="font-family: 'Chivo';">
-                  Aa
-                </div>
-                <div class="font-name">
-                  Chivo
-                </div>
-              </div>
-            </label>
-            <label for="blato" class="expansion-control">
-              <input type="radio" id="blato" name="exp3" class="font-radio">
-              <div class="font-option body-option">
-                <div class="font-example" style="font-family: 'Lato';">
-                  Aa
-                </div>
-                <div class="font-name">
-                  Lato
-                </div>
-              </div>
-            </label>
-            <label for="btimes" class="expansion-control">
-              <input type="radio" id="btimes" name="exp3" class="font-radio">
-              <div class="font-option body-option">
-                <div class="font-example" style="font-family: 'Tinos';">
-                  Aa
-                </div>
-                <div class="font-name">
-                  Times New
-                </div>
-              </div>
-            </label>
-            <label for="bnanum" class="expansion-control">
-              <input type="radio" id="bnanum" name="exp3" class="font-radio">
-              <div class="font-option body-option">
-                <div class="font-example" style="font-family: 'Nanum Gothic';">
-                  Aa
-                </div>
-                <div class="font-name">
-                  Nanum Gothic
-                </div>
-              </div>
-            </label>
-          </div>
-          <span class="or">or</span>
-          <div class="select-container">
-            <div class="mdc-text-field mdc-text-field2">
-              <input class="mdc-text-field__input" id="text-field-hero-input">
-              <div class="mdc-line-ripple"></div>
-              <label for="text-field-hero-input" class="mdc-floating-label">Search Google Fonts...</label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </aside>
-    <div class="shrine-body">
+  <main>
+    <div class="type-scale-container">
       <div class="mdc-tab-bar" role="tablist">
         <div class="mdc-tab-scroller mdc-tab-scroller--align-start">
           <div class="mdc-tab-scroller__scroll-area">
@@ -205,15 +25,6 @@
                   <span class="mdc-tab__text-label">TYPE SCALE</span>
                 </span>
                 <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                  <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                </span>
-                <span class="mdc-tab__ripple"></span>
-              </button>
-              <button class="mdc-tab mdc-tab--min-width" role="tab" aria-selected="true" tabindex="0">
-                <span class="mdc-tab__content">
-                  <span class="mdc-tab__text-label">UI APPLICATION</span>
-                </span>
-                <span class="mdc-tab-indicator">
                   <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                 </span>
                 <span class="mdc-tab__ripple"></span>
@@ -234,83 +45,29 @@
       <div class="main-content">
         <label for="h1radio" class="expansion-control">
           <div class="type-scale-item">
-            <div class="type-scale-variable">
-              <span>$mdc-typography--headline1</span>
-            </div>
-            <div id="h1" class="type-scale-example headline-example"
-              style="font-size: 96px; font-weight: lighter; letter-spacing: -1.5px;">
-              <span>All their equipment and instruments are alive</span>
+            <div id="h1" class="type-scale-example headline-example">
+              <span class="sentance" style="font-size: 96px; font-weight: lighter; letter-spacing: -1.5px;">All their
+                equipment and instruments are alive</span>
+              <div class="type-scale-variable">
+                Headline 1
+              </div>
               <input type="radio" id="h1radio" name="exp1" class="expansion-radio" checked>
-              <div class="type-scale-buttons tsbh1">
-                <div class="mdc-select demo-width-class h1typeface">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="Roboto">
-                        Roboto
-                      </li>
-                      <li class="mdc-list-item" data-value="Montserrat">
-                        Montserrat
-                      </li>
-                      <li class="mdc-list-item" data-value="Shrikhand">
-                        Shrikhand
-                      </li>
-                      <li class="mdc-list-item" data-value="Raleway">
-                        Raleway
-                      </li>
-                      <li class="mdc-list-item" data-value="Noto Sans">
-                        Noto Sans
-                      </li>
-                      <li class="mdc-list-item" data-value="Chivo">
-                        Chivo
-                      </li>
-                      <li class="mdc-list-item" data-value="Lato">
-                        Lato
-                      </li>
-                      <li class="mdc-list-item" data-value="Tinos">
-                        Times New Roman
-                      </li>
-                      <li class="mdc-list-item" data-value="Nanum Gothic">
-                        Nanum Gothic
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Typeface</span>
-                  <div class="mdc-line-ripple"></div>
+              <div class="type-scale-meta">
+                <div>
+                  <span class="label">Typeface</span>
+                  <span class="value">Roboto</span>
                 </div>
-                <div class="mdc-select demo-width-class h1weight">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="300">
-                        Light
-                      </li>
-                      <li class="mdc-list-item" data-value="400">
-                        Regular
-                      </li>
-                      <li class="mdc-list-item" data-value="500">
-                        Bold
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Weight</span>
-                  <div class="mdc-line-ripple"></div>
+                <div>
+                  <span class="label">Weight</span>
+                  <span class="value">Light</span>
                 </div>
-                <div class="mdc-text-field demo-width-class h1size">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Size</label>
+                <div>
+                  <span class="label">Size</span>
+                  <span class="value">96px</span>
                 </div>
-                <div class="mdc-text-field demo-width-class h1tracking">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Tracking</label>
+                <div>
+                  <span class="label">Tracking</span>
+                  <span class="value">-1.5px</span>
                 </div>
               </div>
             </div>
@@ -318,83 +75,29 @@
         </label>
         <label for="h2radio" class="expansion-control">
           <div class="type-scale-item">
-            <div class="type-scale-variable">
-              <span>$mdc-typography--headline2</span>
-            </div>
-            <div id="h2" class="type-scale-example headline-example"
-              style="font-size: 60px; font-weight: lighter; letter-spacing: -0.5px;">
-              <span>A red flaire silhoutted the jagged edge of a wing.</span>
+            <div id="h2" class="type-scale-example headline-example">
+              <span class="sentance" style="font-size: 60px; font-weight: lighter; letter-spacing: -0.5px;">A red flaire
+                silhoutted the jagged edge of a wing.</span>
+              <div class="type-scale-variable">
+                Headline 2
+              </div>
               <input type="radio" id="h2radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-buttons tsbh2">
-                <div class="mdc-select demo-width-class h2typeface">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="Roboto">
-                        Roboto
-                      </li>
-                      <li class="mdc-list-item" data-value="Montserrat">
-                        Montserrat
-                      </li>
-                      <li class="mdc-list-item" data-value="Shrikhand">
-                        Shrikhand
-                      </li>
-                      <li class="mdc-list-item" data-value="Raleway">
-                        Raleway
-                      </li>
-                      <li class="mdc-list-item" data-value="Noto Sans">
-                        Noto Sans
-                      </li>
-                      <li class="mdc-list-item" data-value="Chivo">
-                        Chivo
-                      </li>
-                      <li class="mdc-list-item" data-value="Lato">
-                        Lato
-                      </li>
-                      <li class="mdc-list-item" data-value="Tinos">
-                        Times New Roman
-                      </li>
-                      <li class="mdc-list-item" data-value="Nanum Gothic">
-                        Nanum Gothic
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Typeface</span>
-                  <div class="mdc-line-ripple"></div>
+              <div class="type-scale-meta">
+                <div>
+                  <span class="label">Typeface</span>
+                  <span class="value">Roboto</span>
                 </div>
-                <div class="mdc-select demo-width-class h2weight">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="300">
-                        Light
-                      </li>
-                      <li class="mdc-list-item" data-value="400">
-                        Regular
-                      </li>
-                      <li class="mdc-list-item" data-value="500">
-                        Bold
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Weight</span>
-                  <div class="mdc-line-ripple"></div>
+                <div>
+                  <span class="label">Weight</span>
+                  <span class="value">Light</span>
                 </div>
-                <div class="mdc-text-field demo-width-class h2size">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Size</label>
+                <div>
+                  <span class="label">Size</span>
+                  <span class="value">60px</span>
                 </div>
-                <div class="mdc-text-field demo-width-class h2tracking">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Tracking</label>
+                <div>
+                  <span class="label">Tracking</span>
+                  <span class="value">-0.5px</span>
                 </div>
               </div>
             </div>
@@ -402,82 +105,29 @@
         </label>
         <label for="h3radio" class="expansion-control">
           <div class="type-scale-item">
-            <div class="type-scale-variable">
-              <span>$mdc-typography--headline3</span>
-            </div>
-            <div id="h3" class="type-scale-example headline-example" style="font-size: 48px; font-weight: normal; letter-spacing: 0px;">
-              <span>I watched the storm, so beautiful yet terrific.</span>
+            <div id="h3" class="type-scale-example headline-example">
+              <span class="sentance" style="font-size: 48px; font-weight: normal; letter-spacing: 0px;">I watched the
+                storm, so beautiful yet terrific.</span>
+              <div class="type-scale-variable">
+                Headline 3
+              </div>
               <input type="radio" id="h3radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-buttons tsbh3">
-                <div class="mdc-select demo-width-class h3typeface">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="Roboto">
-                        Roboto
-                      </li>
-                      <li class="mdc-list-item" data-value="Montserrat">
-                        Montserrat
-                      </li>
-                      <li class="mdc-list-item" data-value="Shrikhand">
-                        Shrikhand
-                      </li>
-                      <li class="mdc-list-item" data-value="Raleway">
-                        Raleway
-                      </li>
-                      <li class="mdc-list-item" data-value="Noto Sans">
-                        Noto Sans
-                      </li>
-                      <li class="mdc-list-item" data-value="Chivo">
-                        Chivo
-                      </li>
-                      <li class="mdc-list-item" data-value="Lato">
-                        Lato
-                      </li>
-                      <li class="mdc-list-item" data-value="Tinos">
-                        Times New Roman
-                      </li>
-                      <li class="mdc-list-item" data-value="Nanum Gothic">
-                        Nanum Gothic
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Typeface</span>
-                  <div class="mdc-line-ripple"></div>
+              <div class="type-scale-meta">
+                <div>
+                  <span class="label">Typeface</span>
+                  <span class="value">Roboto</span>
                 </div>
-                <div class="mdc-select demo-width-class h3weight">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item" data-value="300">
-                        Light
-                      </li>
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="400">
-                        Regular
-                      </li>
-                      <li class="mdc-list-item" data-value="500">
-                        Bold
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Weight</span>
-                  <div class="mdc-line-ripple"></div>
+                <div>
+                  <span class="label">Weight</span>
+                  <span class="value">Normal</span>
                 </div>
-                <div class="mdc-text-field demo-width-class h3size">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Size</label>
+                <div>
+                  <span class="label">Size</span>
+                  <span class="value">48px</span>
                 </div>
-                <div class="mdc-text-field demo-width-class h3tracking">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Tracking</label>
+                <div>
+                  <span class="label">Tracking</span>
+                  <span class="value">0px</span>
                 </div>
               </div>
             </div>
@@ -485,83 +135,30 @@
         </label>
         <label for="h4radio" class="expansion-control">
           <div class="type-scale-item">
-            <div class="type-scale-variable">
-              <span>$mdc-typography--headline4</span>
-            </div>
-            <div id="h4" class="type-scale-example headline-example"
-              style="font-size: 34px; font-weight: normal; letter-spacing: 0.25px;">
-              <span>Almost before we knew it, we had left the ground.</span>
+
+            <div id="h4" class="type-scale-example headline-example">
+              <span class="sentance" style="font-size: 34px; font-weight: normal; letter-spacing: 0.25px;">Almost before
+                we knew it, we had left the ground.</span>
+              <div class="type-scale-variable">
+                <span>Headline 4</span>
+              </div>
               <input type="radio" id="h4radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-buttons tsbh4">
-                <div class="mdc-select demo-width-class h4typeface">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="Roboto">
-                        Roboto
-                      </li>
-                      <li class="mdc-list-item" data-value="Montserrat">
-                        Montserrat
-                      </li>
-                      <li class="mdc-list-item" data-value="Shrikhand">
-                        Shrikhand
-                      </li>
-                      <li class="mdc-list-item" data-value="Raleway">
-                        Raleway
-                      </li>
-                      <li class="mdc-list-item" data-value="Noto Sans">
-                        Noto Sans
-                      </li>
-                      <li class="mdc-list-item" data-value="Chivo">
-                        Chivo
-                      </li>
-                      <li class="mdc-list-item" data-value="Lato">
-                        Lato
-                      </li>
-                      <li class="mdc-list-item" data-value="Tinos">
-                        Times New Roman
-                      </li>
-                      <li class="mdc-list-item" data-value="Nanum Gothic">
-                        Nanum Gothic
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Typeface</span>
-                  <div class="mdc-line-ripple"></div>
+              <div class="type-scale-meta">
+                <div>
+                  <span class="label">Typeface</span>
+                  <span class="value">Roboto</span>
                 </div>
-                <div class="mdc-select demo-width-class h4weight">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item" data-value="300">
-                        Light
-                      </li>
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="400">
-                        Regular
-                      </li>
-                      <li class="mdc-list-item" data-value="500">
-                        Bold
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Weight</span>
-                  <div class="mdc-line-ripple"></div>
+                <div>
+                  <span class="label">Weight</span>
+                  <span class="value">Normal</span>
                 </div>
-                <div class="mdc-text-field demo-width-class h4size">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Size</label>
+                <div>
+                  <span class="label">Size</span>
+                  <span class="value">34px</span>
                 </div>
-                <div class="mdc-text-field demo-width-class h4tracking">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Tracking</label>
+                <div>
+                  <span class="label">Tracking</span>
+                  <span class="value">0.25px</span>
                 </div>
               </div>
             </div>
@@ -569,82 +166,30 @@
         </label>
         <label for="h5radio" class="expansion-control">
           <div class="type-scale-item">
-            <div class="type-scale-variable">
-              <span>$mdc-typography--headline5</span>
-            </div>
-            <div id="h5" class="type-scale-example headline-example" style="font-size: 24px; font-weight: normal; letter-spacing: 0px;">
-              <span>A shining crescent far beneath the flying vessel.</span>
+
+            <div id="h5" class="type-scale-example headline-example">
+              <span class="sentance" style="font-size: 24px; font-weight: normal; letter-spacing: 0px;">A shining
+                crescent far beneath the flying vessel.</span>
+              <div class="type-scale-variable">
+                <span>Headline 5</span>
+              </div>
               <input type="radio" id="h5radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-buttons tsbh5">
-                <div class="mdc-select demo-width-class h5typeface">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="Roboto">
-                        Roboto
-                      </li>
-                      <li class="mdc-list-item" data-value="Montserrat">
-                        Montserrat
-                      </li>
-                      <li class="mdc-list-item" data-value="Shrikhand">
-                        Shrikhand
-                      </li>
-                      <li class="mdc-list-item" data-value="Raleway">
-                        Raleway
-                      </li>
-                      <li class="mdc-list-item" data-value="Noto Sans">
-                        Noto Sans
-                      </li>
-                      <li class="mdc-list-item" data-value="Chivo">
-                        Chivo
-                      </li>
-                      <li class="mdc-list-item" data-value="Lato">
-                        Lato
-                      </li>
-                      <li class="mdc-list-item" data-value="Tinos">
-                        Times New Roman
-                      </li>
-                      <li class="mdc-list-item" data-value="Nanum Gothic">
-                        Nanum Gothic
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Typeface</span>
-                  <div class="mdc-line-ripple"></div>
+              <div class="type-scale-meta">
+                <div>
+                  <span class="label">Typeface</span>
+                  <span class="value">Roboto</span>
                 </div>
-                <div class="mdc-select demo-width-class h5weight">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item" data-value="300">
-                        Light
-                      </li>
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="400">
-                        Regular
-                      </li>
-                      <li class="mdc-list-item" data-value="500">
-                        Bold
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Weight</span>
-                  <div class="mdc-line-ripple"></div>
+                <div>
+                  <span class="label">Weight</span>
+                  <span class="value">Normal</span>
                 </div>
-                <div class="mdc-text-field demo-width-class h5size">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Size</label>
+                <div>
+                  <span class="label">Size</span>
+                  <span class="value">24px</span>
                 </div>
-                <div class="mdc-text-field demo-width-class h5tracking">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Tracking</label>
+                <div>
+                  <span class="label">Tracking</span>
+                  <span class="value">0px</span>
                 </div>
               </div>
             </div>
@@ -652,82 +197,30 @@
         </label>
         <label for="h6radio" class="expansion-control">
           <div class="type-scale-item">
-            <div class="type-scale-variable">
-              <span>$mdc-typography--headline6</span>
-            </div>
-            <div id="h6" class="type-scale-example headline-example" style="font-size: 20px; font-weight: 500; letter-spacing: 0.15px;">
-              <span>It was going to be a lonely trip back.</span>
+
+            <div id="h6" class="type-scale-example headline-example">
+              <span class="sentance" style="font-size: 20px; font-weight: 500; letter-spacing: 0.15px;">It was going to
+                be a lonely trip back.</span>
+              <div class="type-scale-variable">
+                <span>Headline 6</span>
+              </div>
               <input type="radio" id="h6radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-buttons tsbh6">
-                <div class="mdc-select demo-width-class h6typeface">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="Roboto">
-                        Roboto
-                      </li>
-                      <li class="mdc-list-item" data-value="Montserrat">
-                        Montserrat
-                      </li>
-                      <li class="mdc-list-item" data-value="Shrikhand">
-                        Shrikhand
-                      </li>
-                      <li class="mdc-list-item" data-value="Raleway">
-                        Raleway
-                      </li>
-                      <li class="mdc-list-item" data-value="Noto Sans">
-                        Noto Sans
-                      </li>
-                      <li class="mdc-list-item" data-value="Chivo">
-                        Chivo
-                      </li>
-                      <li class="mdc-list-item" data-value="Lato">
-                        Lato
-                      </li>
-                      <li class="mdc-list-item" data-value="Tinos">
-                        Times New Roman
-                      </li>
-                      <li class="mdc-list-item" data-value="Nanum Gothic">
-                        Nanum Gothic
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Typeface</span>
-                  <div class="mdc-line-ripple"></div>
+              <div class="type-scale-meta">
+                <div>
+                  <span class="label">Typeface</span>
+                  <span class="value">Roboto</span>
                 </div>
-                <div class="mdc-select demo-width-class h6weight">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item" data-value="300">
-                        Light
-                      </li>
-                      <li class="mdc-list-item" data-value="400">
-                        Regular
-                      </li>
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="500">
-                        Bold
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Weight</span>
-                  <div class="mdc-line-ripple"></div>
+                <div>
+                  <span class="label">Weight</span>
+                  <span class="value">Bold</span>
                 </div>
-                <div class="mdc-text-field demo-width-class h6size">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Size</label>
+                <div>
+                  <span class="label">Size</span>
+                  <span class="value">20px</span>
                 </div>
-                <div class="mdc-text-field demo-width-class h6tracking">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Tracking</label>
+                <div>
+                  <span class="label">Tracking</span>
+                  <span class="value">0.15px</span>
                 </div>
               </div>
             </div>
@@ -735,83 +228,30 @@
         </label>
         <label for="s1radio" class="expansion-control">
           <div class="type-scale-item">
-            <div class="type-scale-variable">
-              <span>$mdc-typography--subtitle1</span>
-            </div>
-            <div id="subtitle1" class="type-scale-example headline-example"
-              style="font-size: 16px; font-weight: normal; letter-spacing: 0.15px;">
-              <span>Mist enveloped the ship three hours out from port.</span>
+
+            <div id="subtitle1" class="type-scale-example headline-example">
+              <span class="sentence" style="font-size: 16px; font-weight: normal; letter-spacing: 0.15px;">Mist
+                enveloped the ship three hours out from port.</span>
+              <div class="type-scale-variable">
+                <span>Subtitle 1</span>
+              </div>
               <input type="radio" id="s1radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-buttons tsbs1">
-                <div class="mdc-select demo-width-class s1typeface">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="Roboto">
-                        Roboto
-                      </li>
-                      <li class="mdc-list-item" data-value="Montserrat">
-                        Montserrat
-                      </li>
-                      <li class="mdc-list-item" data-value="Shrikhand">
-                        Shrikhand
-                      </li>
-                      <li class="mdc-list-item" data-value="Raleway">
-                        Raleway
-                      </li>
-                      <li class="mdc-list-item" data-value="Noto Sans">
-                        Noto Sans
-                      </li>
-                      <li class="mdc-list-item" data-value="Chivo">
-                        Chivo
-                      </li>
-                      <li class="mdc-list-item" data-value="Lato">
-                        Lato
-                      </li>
-                      <li class="mdc-list-item" data-value="Tinos">
-                        Times New Roman
-                      </li>
-                      <li class="mdc-list-item" data-value="Nanum Gothic">
-                        Nanum Gothic
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Typeface</span>
-                  <div class="mdc-line-ripple"></div>
+              <div class="type-scale-meta">
+                <div>
+                  <span class="label">Typeface</span>
+                  <span class="value">Roboto</span>
                 </div>
-                <div class="mdc-select demo-width-class s1weight">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item" data-value="300">
-                        Light
-                      </li>
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="400">
-                        Regular
-                      </li>
-                      <li class="mdc-list-item" data-value="500">
-                        Bold
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Weight</span>
-                  <div class="mdc-line-ripple"></div>
+                <div>
+                  <span class="label">Weight</span>
+                  <span class="value">Normal</span>
                 </div>
-                <div class="mdc-text-field demo-width-class s1size">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Size</label>
+                <div>
+                  <span class="label">Size</span>
+                  <span class="value">16px</span>
                 </div>
-                <div class="mdc-text-field demo-width-class s1tracking">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Tracking</label>
+                <div>
+                  <span class="label">Tracking</span>
+                  <span class="value">0.15px</span>
                 </div>
               </div>
             </div>
@@ -819,83 +259,30 @@
         </label>
         <label for="s2radio" class="expansion-control">
           <div class="type-scale-item">
-            <div class="type-scale-variable">
-              <span>$mdc-typography--subtitle2</span>
-            </div>
-            <div id="subtitle2" class="type-scale-example headline-example"
-              style="font-size: 14px; font-weight: 500; letter-spacing: 0.1px;">
-              <span>My two natures had memory in common.</span>
+
+            <div id="subtitle2" class="type-scale-example headline-example">
+              <span style="font-size: 14px; font-weight: 500; letter-spacing: 0.1px;" class="sentance">My two natures
+                had memory in common.</span>
+              <div class="type-scale-variable">
+                <span>Subtitle 2</span>
+              </div>
               <input type="radio" id="s2radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-buttons tsbs2">
-                <div class="mdc-select demo-width-class s2typeface">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="Roboto">
-                        Roboto
-                      </li>
-                      <li class="mdc-list-item" data-value="Montserrat">
-                        Montserrat
-                      </li>
-                      <li class="mdc-list-item" data-value="Shrikhand">
-                        Shrikhand
-                      </li>
-                      <li class="mdc-list-item" data-value="Raleway">
-                        Raleway
-                      </li>
-                      <li class="mdc-list-item" data-value="Noto Sans">
-                        Noto Sans
-                      </li>
-                      <li class="mdc-list-item" data-value="Chivo">
-                        Chivo
-                      </li>
-                      <li class="mdc-list-item" data-value="Lato">
-                        Lato
-                      </li>
-                      <li class="mdc-list-item" data-value="Tinos">
-                        Times New Roman
-                      </li>
-                      <li class="mdc-list-item" data-value="Nanum Gothic">
-                        Nanum Gothic
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Typeface</span>
-                  <div class="mdc-line-ripple"></div>
+              <div class="type-scale-meta">
+                <div>
+                  <span class="label">Typeface</span>
+                  <span class="value">Roboto</span>
                 </div>
-                <div class="mdc-select demo-width-class s2weight">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item" data-value="300">
-                        Light
-                      </li>
-                      <li class="mdc-list-item" data-value="400">
-                        Regular
-                      </li>
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="500">
-                        Bold
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Weight</span>
-                  <div class="mdc-line-ripple"></div>
+                <div>
+                  <span class="label">Weight</span>
+                  <span class="value">Bold</span>
                 </div>
-                <div class="mdc-text-field demo-width-class s2size">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Size</label>
+                <div>
+                  <span class="label">Size</span>
+                  <span class="value">14px</span>
                 </div>
-                <div class="mdc-text-field demo-width-class s2tracking">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Tracking</label>
+                <div>
+                  <span class="label">Tracking</span>
+                  <span class="value">0.1px</span>
                 </div>
               </div>
             </div>
@@ -903,83 +290,30 @@
         </label>
         <label for="body1radio" class="expansion-control">
           <div class="type-scale-item">
-            <div class="type-scale-variable">
-              <span>$mdc-typography--body1</span>
-            </div>
-            <div id="body1" class="type-scale-example body-example"
-              style="font-size: 16px; font-weight: normal; letter-spacing: 0.5px;">
-              <span>Silver mist suffused the deck of the ship.</span>
+
+            <div id="body1" class="type-scale-example body-example">
+              <span class="sentance" style="font-size: 16px; font-weight: normal; letter-spacing: 0.5px;">Silver mist
+                suffused the deck of the ship.</span>
+              <div class="type-scale-variable">
+                <span>Body 1</span>
+              </div>
               <input type="radio" id="body1radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-buttons tsbbody1">
-                <div class="mdc-select demo-width-class body1typeface">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="Roboto">
-                        Roboto
-                      </li>
-                      <li class="mdc-list-item" data-value="Montserrat">
-                        Montserrat
-                      </li>
-                      <li class="mdc-list-item" data-value="Shrikhand">
-                        Shrikhand
-                      </li>
-                      <li class="mdc-list-item" data-value="Raleway">
-                        Raleway
-                      </li>
-                      <li class="mdc-list-item" data-value="Noto Sans">
-                        Noto Sans
-                      </li>
-                      <li class="mdc-list-item" data-value="Chivo">
-                        Chivo
-                      </li>
-                      <li class="mdc-list-item" data-value="Lato">
-                        Lato
-                      </li>
-                      <li class="mdc-list-item" data-value="Tinos">
-                        Times New Roman
-                      </li>
-                      <li class="mdc-list-item" data-value="Nanum Gothic">
-                        Nanum Gothic
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Typeface</span>
-                  <div class="mdc-line-ripple"></div>
+              <div class="type-scale-meta">
+                <div>
+                  <span class="label">Typeface</span>
+                  <span class="value">Roboto</span>
                 </div>
-                <div class="mdc-select demo-width-class body1weight">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item" data-value="300">
-                        Light
-                      </li>
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="400">
-                        Regular
-                      </li>
-                      <li class="mdc-list-item" data-value="500">
-                        Bold
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Weight</span>
-                  <div class="mdc-line-ripple"></div>
+                <div>
+                  <span class="label">Weight</span>
+                  <span class="value">Normal</span>
                 </div>
-                <div class="mdc-text-field demo-width-class body1size">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Size</label>
+                <div>
+                  <span class="label">Size</span>
+                  <span class="value">16px</span>
                 </div>
-                <div class="mdc-text-field demo-width-class body1tracking">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Tracking</label>
+                <div>
+                  <span class="label">Tracking</span>
+                  <span class="value">0.5px</span>
                 </div>
               </div>
             </div>
@@ -987,83 +321,30 @@
         </label>
         <label for="body2radio" class="expansion-control">
           <div class="type-scale-item">
-            <div class="type-scale-variable">
-              <span>$mdc-typography--body2</span>
-            </div>
-            <div id="body2" class="type-scale-example body-example"
-              style="font-size: 14px; font-weight: normal; letter-spacing: 0.25px;">
-              <span>The face of the moon was in shadow.</span>
+
+            <div id="body2" class="type-scale-example body-example">
+              <span class="sentance" style="font-size: 14px; font-weight: normal; letter-spacing: 0.25px;">The face of
+                the moon was in shadow.</span>
+              <div class="type-scale-variable">
+                <span>Body 2</span>
+              </div>
               <input type="radio" id="body2radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-buttons tsbbody2">
-                <div class="mdc-select demo-width-class body2typeface">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="Roboto">
-                        Roboto
-                      </li>
-                      <li class="mdc-list-item" data-value="Montserrat">
-                        Montserrat
-                      </li>
-                      <li class="mdc-list-item" data-value="Shrikhand">
-                        Shrikhand
-                      </li>
-                      <li class="mdc-list-item" data-value="Raleway">
-                        Raleway
-                      </li>
-                      <li class="mdc-list-item" data-value="Noto Sans">
-                        Noto Sans
-                      </li>
-                      <li class="mdc-list-item" data-value="Chivo">
-                        Chivo
-                      </li>
-                      <li class="mdc-list-item" data-value="Lato">
-                        Lato
-                      </li>
-                      <li class="mdc-list-item" data-value="Tinos">
-                        Times New Roman
-                      </li>
-                      <li class="mdc-list-item" data-value="Nanum Gothic">
-                        Nanum Gothic
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Typeface</span>
-                  <div class="mdc-line-ripple"></div>
+              <div class="type-scale-meta">
+                <div>
+                  <span class="label">Typeface</span>
+                  <span class="value">Roboto</span>
                 </div>
-                <div class="mdc-select demo-width-class body2weight">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item" data-value="300">
-                        Light
-                      </li>
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="400">
-                        Regular
-                      </li>
-                      <li class="mdc-list-item" data-value="500">
-                        Bold
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Weight</span>
-                  <div class="mdc-line-ripple"></div>
+                <div>
+                  <span class="label">Weight</span>
+                  <span class="value">Normal</span>
                 </div>
-                <div class="mdc-text-field demo-width-class body2size">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Size</label>
+                <div>
+                  <span class="label">Size</span>
+                  <span class="value">14px</span>
                 </div>
-                <div class="mdc-text-field demo-width-class body2tracking">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Tracking</label>
+                <div>
+                  <span class="label">Tracking</span>
+                  <span class="value">0.25px</span>
                 </div>
               </div>
             </div>
@@ -1071,83 +352,31 @@
         </label>
         <label for="bradio" class="expansion-control">
           <div class="type-scale-item">
-            <div class="type-scale-variable">
-              <span>$mdc-typography--button</span>
-            </div>
-            <div id="button" class="type-scale-example body-example"
-              style="font-size: 14px; font-weight: 500; letter-spacing: 1.25px;">
-              <span style="text-transform: uppercase;">She stared through the window at the stars.</span>
+
+            <div id="button" class="type-scale-example body-example">
+              <span class="sentance"
+                style="font-size: 14px; font-weight: 500; letter-spacing: 1.25px; text-transform: uppercase;">She stared
+                through the window at the stars.</span>
+              <div class="type-scale-variable">
+                <span>Button</span>
+              </div>
               <input type="radio" id="bradio" name="exp1" class="expansion-radio">
-              <div class="type-scale-buttons tsbb">
-                <div class="mdc-select demo-width-class btypeface">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="Roboto">
-                        Roboto
-                      </li>
-                      <li class="mdc-list-item" data-value="Montserrat">
-                        Montserrat
-                      </li>
-                      <li class="mdc-list-item" data-value="Shrikhand">
-                        Shrikhand
-                      </li>
-                      <li class="mdc-list-item" data-value="Raleway">
-                        Raleway
-                      </li>
-                      <li class="mdc-list-item" data-value="Noto Sans">
-                        Noto Sans
-                      </li>
-                      <li class="mdc-list-item" data-value="Chivo">
-                        Chivo
-                      </li>
-                      <li class="mdc-list-item" data-value="Lato">
-                        Lato
-                      </li>
-                      <li class="mdc-list-item" data-value="Tinos">
-                        Times New Roman
-                      </li>
-                      <li class="mdc-list-item" data-value="Nanum Gothic">
-                        Nanum Gothic
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Typeface</span>
-                  <div class="mdc-line-ripple"></div>
+              <div class="type-scale-meta">
+                <div>
+                  <span class="label">Typeface</span>
+                  <span class="value">Roboto</span>
                 </div>
-                <div class="mdc-select demo-width-class bweight">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item" data-value="300">
-                        Light
-                      </li>
-                      <li class="mdc-list-item" data-value="400">
-                        Regular
-                      </li>
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="500">
-                        Bold
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Weight</span>
-                  <div class="mdc-line-ripple"></div>
+                <div>
+                  <span class="label">Weight</span>
+                  <span class="value">Bold</span>
                 </div>
-                <div class="mdc-text-field demo-width-class bsize">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Size</label>
+                <div>
+                  <span class="label">Size</span>
+                  <span class="value">14px</span>
                 </div>
-                <div class="mdc-text-field demo-width-class btracking">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Tracking</label>
+                <div>
+                  <span class="label">Tracking</span>
+                  <span class="value">1.25px</span>
                 </div>
               </div>
             </div>
@@ -1155,83 +384,30 @@
         </label>
         <label for="cradio" class="expansion-control">
           <div class="type-scale-item">
-            <div class="type-scale-variable">
-              <span>$mdc-typography--caption</span>
-            </div>
-            <div id="caption" class="type-scale-example body-example"
-              style="font-size: 12px; font-weight: normal; letter-spacing: 0.4px;">
-              <span>The recorded voice scratched in the speaker.</span>
+
+            <div id="caption" class="type-scale-example body-example">
+              <span class="sentance" style="font-size: 12px; font-weight: normal; letter-spacing: 0.4px;">The recorded
+                voice scratched in the speaker.</span>
+              <div class="type-scale-variable">
+                <span>Caption</span>
+              </div>
               <input type="radio" id="cradio" name="exp1" class="expansion-radio">
-              <div class="type-scale-buttons tsbc">
-                <div class="mdc-select demo-width-class ctypeface">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="Roboto">
-                        Roboto
-                      </li>
-                      <li class="mdc-list-item" data-value="Montserrat">
-                        Montserrat
-                      </li>
-                      <li class="mdc-list-item" data-value="Shrikhand">
-                        Shrikhand
-                      </li>
-                      <li class="mdc-list-item" data-value="Raleway">
-                        Raleway
-                      </li>
-                      <li class="mdc-list-item" data-value="Noto Sans">
-                        Noto Sans
-                      </li>
-                      <li class="mdc-list-item" data-value="Chivo">
-                        Chivo
-                      </li>
-                      <li class="mdc-list-item" data-value="Lato">
-                        Lato
-                      </li>
-                      <li class="mdc-list-item" data-value="Tinos">
-                        Times New Roman
-                      </li>
-                      <li class="mdc-list-item" data-value="Nanum Gothic">
-                        Nanum Gothic
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Typeface</span>
-                  <div class="mdc-line-ripple"></div>
+              <div class="type-scale-meta">
+                <div>
+                  <span class="label">Typeface</span>
+                  <span class="value">Roboto</span>
                 </div>
-                <div class="mdc-select demo-width-class cweight">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item" data-value="300">
-                        Light
-                      </li>
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="400">
-                        Regular
-                      </li>
-                      <li class="mdc-list-item" data-value="500">
-                        Bold
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Weight</span>
-                  <div class="mdc-line-ripple"></div>
+                <div>
+                  <span class="label">Weight</span>
+                  <span class="value">Normal</span>
                 </div>
-                <div class="mdc-text-field demo-width-class csize">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Size</label>
+                <div>
+                  <span class="label">Size</span>
+                  <span class="value">12px</span>
                 </div>
-                <div class="mdc-text-field demo-width-class ctracking">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Tracking</label>
+                <div>
+                  <span class="label">Tracking</span>
+                  <span class="value">0.4px</span>
                 </div>
               </div>
             </div>
@@ -1239,83 +415,30 @@
         </label>
         <label for="oradio" class="expansion-control">
           <div class="type-scale-item">
-            <div class="type-scale-variable">
-              <span>$mdc-typography--overline</span>
-            </div>
-            <div id="overline" class="type-scale-example body-example"
-              style="font-size: 10px; font-weight: normal; letter-spacing: 1.5px;">
-              <span style="text-transform: uppercase;">The sky was cloudless and of a deep dark blue.</span>
+
+            <div id="overline" class="type-scale-example body-example">
+              <span style="font-size: 10px; font-weight: normal; letter-spacing: 1.5px; text-transform: uppercase;">The
+                sky was cloudless and of a deep dark blue.</span>
+              <div class="type-scale-variable">
+                <span>Overline</span>
+              </div>
               <input type="radio" id="oradio" name="exp1" class="expansion-radio">
-              <div class="type-scale-buttons tsbo">
-                <div class="mdc-select demo-width-class otypeface">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="Roboto">
-                        Roboto
-                      </li>
-                      <li class="mdc-list-item" data-value="Montserrat">
-                        Montserrat
-                      </li>
-                      <li class="mdc-list-item" data-value="Shrikhand">
-                        Shrikhand
-                      </li>
-                      <li class="mdc-list-item" data-value="Raleway">
-                        Raleway
-                      </li>
-                      <li class="mdc-list-item" data-value="Noto Sans">
-                        Noto Sans
-                      </li>
-                      <li class="mdc-list-item" data-value="Chivo">
-                        Chivo
-                      </li>
-                      <li class="mdc-list-item" data-value="Lato">
-                        Lato
-                      </li>
-                      <li class="mdc-list-item" data-value="Tinos">
-                        Times New Roman
-                      </li>
-                      <li class="mdc-list-item" data-value="Nanum Gothic">
-                        Nanum Gothic
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Typeface</span>
-                  <div class="mdc-line-ripple"></div>
+              <div class="type-scale-meta">
+                <div>
+                  <span class="label">Typeface</span>
+                  <span class="value">Roboto</span>
                 </div>
-                <div class="mdc-select demo-width-class oweight">
-                  <input type="hidden" name="enhanced-select">
-                  <i class="mdc-select__dropdown-icon"></i>
-                  <div class="mdc-select__selected-text"></div>
-                  <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-width-class">
-                    <ul class="mdc-list">
-                      <li class="mdc-list-item" data-value="300">
-                        Light
-                      </li>
-                      <li class="mdc-list-item mdc-list-item--selected" data-value="400">
-                        Regular
-                      </li>
-                      <li class="mdc-list-item" data-value="500">
-                        Bold
-                      </li>
-                    </ul>
-                  </div>
-                  <span class="mdc-floating-label">Weight</span>
-                  <div class="mdc-line-ripple"></div>
+                <div>
+                  <span class="label">Weight</span>
+                  <span class="value">Normal</span>
                 </div>
-                <div class="mdc-text-field demo-width-class osize">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Size</label>
+                <div>
+                  <span class="label">Size</span>
+                  <span class="value">10px</span>
                 </div>
-                <div class="mdc-text-field demo-width-class otracking">
-                  <input class="mdc-text-field__input" id="text-field-hero-input">
-                  <div class="mdc-line-ripple"></div>
-                  <label for="text-field-hero-input"
-                    class="mdc-floating-label mdc-floating-label--float-above">Tracking</label>
+                <div>
+                  <span class="label">Tracking</span>
+                  <span class="value">1.5px</span>
                 </div>
               </div>
             </div>
@@ -1323,7 +446,107 @@
         </label>
       </div>
     </div>
-  </div>
+    <aside class="mdc-drawer meta-drawer">
+      <div class="mdc-drawer__content">
+        <span class="drawer-content-header">Pick a typeface</span>
+        <div class="font-selection-section">
+          <div class="font-header-container">
+            <span class="primary-font-header">Headlines & Subtitles</span>
+            <div class="tooltip">
+              <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path
+                  d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+              </svg>
+              <span class="tooltiptext">In the type scale, headlines span from a range of 1 through 6. Headlines are the
+                largest text on the screen, reserved for short, important text or numerals. <br><br> For headlines, you
+                can choose an expressive font, such as a display, handwritten, or script style. These unconventionals
+                font designs have details and intricacy that help attract the eye.
+              </span>
+            </div>
+          </div>
+          <div class="mdc-select primary-type-select">
+            <div class="mdc-select__anchor">
+              <i class="mdc-select__dropdown-icon"></i>
+              <div class="mdc-select__selected-text"></div>
+              <span class="mdc-floating-label">Pick a Typeface</span>
+              <div class="mdc-line-ripple"></div>
+            </div>
+
+            <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+              <ul class="mdc-list">
+                <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true"></li>
+                <li class="mdc-list-item" data-value="Roboto">
+                  Roboto
+                </li>
+                <li class="mdc-list-item" data-value="Chivo">
+                  Chivo
+                </li>
+                <li class="mdc-list-item" data-value="Lato">
+                  Lato
+                </li>
+                <li class="mdc-list-item" data-value="Times New">
+                  Times New
+                </li>
+                <li class="mdc-list-item" data-value="Nanum Gothic">
+                  Nanum Gothic
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="font-selection-section second">
+            <div class="font-header-container">
+              <span class="primary-font-header">Body & Captions</span>
+              <div class="tooltip">
+                <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0V0z" />
+                  <path
+                    d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                </svg>
+                <span class="tooltiptext">In the type scale, Body, captions, & overlines are used to display the
+                  majority
+                  of information in a screen, and have to be readable at small sizes. We recommend using a font that has
+                  multiple weights, and works well at small sizes.
+                  <br><br>
+                  Body text comes in ranges 1-2, and it’s typically used for long-form writing as it works well for
+                  small
+                  text sizes. For longer sections of text, a serif or sans serif typeface is recommended.
+                </span>
+              </div>
+            </div>
+            <div class="mdc-select secondary-type-select">
+              <div class="mdc-select__anchor">
+                <i class="mdc-select__dropdown-icon"></i>
+                <div class="mdc-select__selected-text"></div>
+                <span class="mdc-floating-label">Pick a Typeface</span>
+                <div class="mdc-line-ripple"></div>
+              </div>
+
+              <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+                <ul class="mdc-list">
+                  <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true"></li>
+                  <li class="mdc-list-item" data-value="Roboto">
+                    Roboto
+                  </li>
+                  <li class="mdc-list-item" data-value="Chivo">
+                    Chivo
+                  </li>
+                  <li class="mdc-list-item" data-value="Lato">
+                    Lato
+                  </li>
+                  <li class="mdc-list-item" data-value="Times New">
+                    Times New
+                  </li>
+                  <li class="mdc-list-item" data-value="Nanum Gothic">
+                    Nanum Gothic
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </aside>
+  </main>
 
 
   <script src="bundle-home.js" async></script>
