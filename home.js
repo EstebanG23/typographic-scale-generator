@@ -1,4 +1,3 @@
-import { MDCList } from '@material/list';
 import { MDCTabBar } from '@material/tab-bar';
 import { MDCSelect } from '@material/select';
 import FontMetrics from 'fontmetrics'
