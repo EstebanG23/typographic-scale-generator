@@ -59,6 +59,10 @@ main {
   display: flex;
 }
 
+.mdc-tab-bar {
+  border-bottom: 1px solid #e0e0e0;
+}
+
 .selected-font {
   background-color: #fefe8d;
   border-color: black;
@@ -84,10 +88,7 @@ main {
 }
 
 .meta-drawer {
-  width: 230px;
-  display: flex;
-  align-items: center;
-  resize: horizontal;
+  width: 200px;
   border-left-width: 1px;
   border-left-style: solid;
 
@@ -108,6 +109,12 @@ main {
   .mdc-list .mdc-list-item {
     @include mdc-states-activated(#fff);
   }
+
+  .mdc-select {
+    width: calc(200px - 32px);
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .type-scale-container {
@@ -119,12 +126,17 @@ main {
   display: inline-block;
   margin: 16px 4px 16px 16px;
   color: rgba(0, 0, 0, 0.87);
+  font-size: 14px;
 }
 
 .font-header-container {
   display: flex;
+  justify-content: space-between;
+  padding-right: 16px;
 
   .info-icon {
+    width: 18px;
+    height: 18px;
     align-self: center;
     margin-top: -4px;
     color: lightgray;
@@ -144,10 +156,12 @@ main {
   width: 280px;
   background-color: white;
   border: solid 1px lightgray;
-  color: black;
+  color: #3c4043;
   border-radius: 6px;
   padding: 20px;
   font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.25px;
 
   /* Position the tooltip */
   position: absolute;
@@ -255,10 +269,16 @@ main {
 }
 
 .drawer-content-header {
-  margin: 20px 0 10px 16px;
-  font-size: 18px;
+  font-size: 14px;
+  margin: 18px 0;
+  padding-left: 12px;
+  padding-bottom: 14px;
   display: block;
-  font-weight: bold;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.mdc-drawer__content {
+  width: auto;
 }
 
 .font-selection-section.second {
