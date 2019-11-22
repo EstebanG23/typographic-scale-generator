@@ -55,24 +55,8 @@
   display: flex;
 }
 
-.home {
-  display: flex; // Flexbox is used to easily arrange the persistent drawer and content side-by-side
-  height: inherit;
-}
-
-.shrine-logo-drawer {
-  display: block;
-  width: 48px;
-  padding: 40px 0 0;
-  margin: 0 auto;
-  fill: currentColor;
-}
-
-.shrine-title {
-  @include mdc-typography(headline6);
-
-  text-align: center;
-  margin: 5px auto;
+main {
+  display: flex;
 }
 
 .selected-font{
@@ -99,14 +83,12 @@
   }
 }
 
-.shrine-drawer {
-  @include mdc-drawer-fill-color-accessible(secondary);
-  // Drawer defaults to a higher z-index, but we aren't overlaying it over anything
-  @include mdc-drawer-z-index(0);
-  width: 500px;
+.meta-drawer {
+  width: 200px;
   resize: horizontal;
+  border-left-width: 1px;
+  border-left-style: solid;
   
-
   .mdc-list {
     margin: 70px 5px auto 5px;
   }
@@ -126,29 +108,9 @@
   }
 }
 
-.shrine-select-item-divider {
-  display: block;
-  border-bottom-color: #EAA4A4;
-  border-bottom-width: 2px;
-  width: 50px;
-  position: relative;
-  top: -8px;
-}
-
-// This needs 2-class specificity to override MDC Drawer styles
-.shrine-drawer .shrine-select-item-divider {
-  margin: 0 auto;
-}
-
-.shrine-body {
-  @include mdc-elevation(4);
-
-  width: -webkit-fill-available;
-  height: 100%;
+.type-scale-container {
   display: block;
   overflow: auto;
-  // z-index: 0; // Elevate over the drawer
-
 }
 
 .primary-font-header{
@@ -242,7 +204,7 @@
 
   .type-scale-item{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border-bottom: solid 1px lightgrey;
     min-height: 30px;
     padding-top: 20px;
