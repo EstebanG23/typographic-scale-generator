@@ -255,11 +255,11 @@
     flex-direction: column;
 
     .sentance {
-      align-self: flex-end;
+      align-self: flex-start;
       white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      width: 100%;
+      text-overflow: clip;
+      width: 150%;
+      overflow-x: scroll;
     }
   }
 }
