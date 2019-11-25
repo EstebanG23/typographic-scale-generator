@@ -1,13 +1,25 @@
 import { MDCTabBar } from '@material/tab-bar';
 import { MDCSelect } from '@material/select';
 import FontMetrics from 'fontmetrics'
-import {MDCRipple} from '@material/ripple';
-import {MDCTextField} from '@material/textfield';
+import { MDCRipple } from '@material/ripple';
+import { MDCTextField } from '@material/textfield';
 import { typography } from './type-vars';
 
 const primaryTypeSelect = new MDCSelect(document.querySelector('.primary-type-select'));
 const secondaryTypeSelect = new MDCSelect(document.querySelector('.secondary-type-select'));
 const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
+
+// Switch content on tab activation
+
+Array.from(document.querySelectorAll('.mdc-tab')).forEach(
+  tab => tab.addEventListener('MDCTab:interacted', (e) => switchToTab(e.detail.tabId))
+);
+
+const switchToTab = (activatedTabId) => {
+  Array.from(document.querySelectorAll('.tab-content')).forEach(tabContent => {
+    tabContent.style.display = tabContent.id.slice(0, -1 * '-content'.length) == activatedTabId.slice(0, -1 * '-tab'.length) ? 'block' : 'none';
+  });
+}
 
 
 // const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
@@ -189,3 +201,68 @@ const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
 //         el.children[2].children[3].children[0].value = el.style.letterSpacing;
 //     });
 // }
+
+const getCode = (type = 'web') => {
+if (type === 'web') {
+  return `
+$mdc-typography-styles-headline1: (
+  font-family: unquote("${typography.h1.typeface}"),
+  font-size: ${typography.h1.size};
+);
+$mdc-typography-styles-headline2: (
+  font-family: unquote("${typography.h2.typeface}"),
+  font-size: ${typography.h2.size};
+);
+$mdc-typography-styles-headline3: (
+  font-family: unquote("${typography.h3.typeface}"),
+  font-size: ${typography.h3.size};
+);
+$mdc-typography-styles-headline4: (
+  font-family: unquote("${typography.h4.typeface}"),
+  font-size: ${typography.h4.size};
+);
+$mdc-typography-styles-headline5: (
+  font-family: unquote("${typography.h5.typeface}"),
+  font-size: ${typography.h5.size};
+);
+$mdc-typography-styles-headline6: (
+  font-family: unquote("${typography.h6.typeface}"),
+  font-size: ${typography.h6.size};
+);
+$mdc-typography-styles-body1: (
+  font-family: unquote("${typography.body1.typeface}"),
+  font-size: ${typography.body1.size};
+);
+$mdc-typography-styles-body2: (
+  font-family: unquote("${typography.body2.typeface}"),
+  font-size: ${typography.body2.size};
+);
+$mdc-typography-styles-subtitle1: (
+  font-family: unquote("${typography.subtitle1.typeface}"),
+  font-size: ${typography.subtitle1.size};
+);
+$mdc-typography-styles-subtitle2: (
+  font-family: unquote("${typography.subtitle2.typeface}"),
+  font-size: ${typography.subtitle2.size};
+);
+$mdc-typography-styles-button: (
+  font-family: unquote("${typography.button.typeface}"),
+  font-size: ${typography.button.size};
+);
+$mdc-typography-styles-overline: (
+  font-family: unquote("${typography.overline.typeface}"),
+  font-size: ${typography.overline.size};
+);
+$mdc-typography-styles-caption: (
+  font-family: unquote("${typography.caption.typeface}"),
+  font-size: ${typography.caption.size};
+);`
+} else if (type === 'android') {
+  return 'android code here'
+}
+else if (type === 'flutter') {
+  return 'flutter code here'
+}
+}
+
+document.querySelector('.code-block').innerHTML = getCode()

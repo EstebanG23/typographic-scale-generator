@@ -20,18 +20,18 @@
         <div class="mdc-tab-scroller mdc-tab-scroller--align-start">
           <div class="mdc-tab-scroller__scroll-area">
             <div class="mdc-tab-scroller__scroll-content">
-              <button class="mdc-tab mdc-tab--min-width mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+              <button id="typescale-tab" class="mdc-tab mdc-tab--min-width mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
                 <span class="mdc-tab__content">
-                  <span class="mdc-tab__text-label">TYPE SCALE</span>
+                  <span class="mdc-tab__text-label">Type Scale</span>
                 </span>
                 <span class="mdc-tab-indicator mdc-tab-indicator--active">
                   <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
                 </span>
                 <span class="mdc-tab__ripple"></span>
               </button>
-              <button class="mdc-tab mdc-tab--min-width" role="tab" aria-selected="true" tabindex="0">
+              <button id="code-tab" class="mdc-tab mdc-tab--min-width" role="tab" aria-selected="true" tabindex="0">
                 <span class="mdc-tab__content">
-                  <span class="mdc-tab__text-label">CODE</span>
+                  <span class="mdc-tab__text-label">Code</span>
                 </span>
                 <span class="mdc-tab-indicator">
                   <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
@@ -43,407 +43,415 @@
         </div>
       </div>
       <div class="main-content">
-        <label for="h1radio" class="expansion-control">
-          <div class="type-scale-item">
-            <div id="h1" class="type-scale-example headline-example">
-              <span class="sentance" style="font-size: 96px; font-weight: lighter; letter-spacing: -1.5px;">All their
-                equipment and instruments are alive</span>
-              <div class="type-scale-variable">
-                Headline 1
-              </div>
-              <input type="radio" id="h1radio" name="exp1" class="expansion-radio" checked>
-              <div class="type-scale-meta">
-                <div>
-                  <span class="label">Typeface</span>
-                  <span class="value">Roboto</span>
+        <section id="typescale-content" class="tab-content">
+          <label for="h1radio" class="expansion-control">
+            <div class="type-scale-item">
+              <div id="h1" class="type-scale-example headline-example">
+                <span class="sentance" style="font-size: 96px; font-weight: lighter; letter-spacing: -1.5px;">All their
+                  equipment and instruments are alive</span>
+                <div class="type-scale-variable">
+                  Headline 1
                 </div>
-                <div>
-                  <span class="label">Weight</span>
-                  <span class="value">Light</span>
-                </div>
-                <div>
-                  <span class="label">Size</span>
-                  <span class="value">96px</span>
-                </div>
-                <div>
-                  <span class="label">Tracking</span>
-                  <span class="value">-1.5px</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </label>
-        <label for="h2radio" class="expansion-control">
-          <div class="type-scale-item">
-            <div id="h2" class="type-scale-example headline-example">
-              <span class="sentance" style="font-size: 60px; font-weight: lighter; letter-spacing: -0.5px;">A red flaire
-                silhoutted the jagged edge of a wing.</span>
-              <div class="type-scale-variable">
-                Headline 2
-              </div>
-              <input type="radio" id="h2radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-meta">
-                <div>
-                  <span class="label">Typeface</span>
-                  <span class="value">Roboto</span>
-                </div>
-                <div>
-                  <span class="label">Weight</span>
-                  <span class="value">Light</span>
-                </div>
-                <div>
-                  <span class="label">Size</span>
-                  <span class="value">60px</span>
-                </div>
-                <div>
-                  <span class="label">Tracking</span>
-                  <span class="value">-0.5px</span>
+                <input type="radio" id="h1radio" name="exp1" class="expansion-radio" checked>
+                <div class="type-scale-meta">
+                  <div>
+                    <span class="label">Typeface</span>
+                    <span class="value">Roboto</span>
+                  </div>
+                  <div>
+                    <span class="label">Weight</span>
+                    <span class="value">Light</span>
+                  </div>
+                  <div>
+                    <span class="label">Size</span>
+                    <span class="value">96px</span>
+                  </div>
+                  <div>
+                    <span class="label">Tracking</span>
+                    <span class="value">-1.5px</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </label>
-        <label for="h3radio" class="expansion-control">
-          <div class="type-scale-item">
-            <div id="h3" class="type-scale-example headline-example">
-              <span class="sentance" style="font-size: 48px; font-weight: normal; letter-spacing: 0px;">I watched the
-                storm, so beautiful yet terrific.</span>
-              <div class="type-scale-variable">
-                Headline 3
-              </div>
-              <input type="radio" id="h3radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-meta">
-                <div>
-                  <span class="label">Typeface</span>
-                  <span class="value">Roboto</span>
+          </label>
+          <label for="h2radio" class="expansion-control">
+            <div class="type-scale-item">
+              <div id="h2" class="type-scale-example headline-example">
+                <span class="sentance" style="font-size: 60px; font-weight: lighter; letter-spacing: -0.5px;">A red flaire
+                  silhoutted the jagged edge of a wing.</span>
+                <div class="type-scale-variable">
+                  Headline 2
                 </div>
-                <div>
-                  <span class="label">Weight</span>
-                  <span class="value">Normal</span>
-                </div>
-                <div>
-                  <span class="label">Size</span>
-                  <span class="value">48px</span>
-                </div>
-                <div>
-                  <span class="label">Tracking</span>
-                  <span class="value">0px</span>
+                <input type="radio" id="h2radio" name="exp1" class="expansion-radio">
+                <div class="type-scale-meta">
+                  <div>
+                    <span class="label">Typeface</span>
+                    <span class="value">Roboto</span>
+                  </div>
+                  <div>
+                    <span class="label">Weight</span>
+                    <span class="value">Light</span>
+                  </div>
+                  <div>
+                    <span class="label">Size</span>
+                    <span class="value">60px</span>
+                  </div>
+                  <div>
+                    <span class="label">Tracking</span>
+                    <span class="value">-0.5px</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </label>
-        <label for="h4radio" class="expansion-control">
-          <div class="type-scale-item">
+          </label>
+          <label for="h3radio" class="expansion-control">
+            <div class="type-scale-item">
+              <div id="h3" class="type-scale-example headline-example">
+                <span class="sentance" style="font-size: 48px; font-weight: normal; letter-spacing: 0px;">I watched the
+                  storm, so beautiful yet terrific.</span>
+                <div class="type-scale-variable">
+                  Headline 3
+                </div>
+                <input type="radio" id="h3radio" name="exp1" class="expansion-radio">
+                <div class="type-scale-meta">
+                  <div>
+                    <span class="label">Typeface</span>
+                    <span class="value">Roboto</span>
+                  </div>
+                  <div>
+                    <span class="label">Weight</span>
+                    <span class="value">Normal</span>
+                  </div>
+                  <div>
+                    <span class="label">Size</span>
+                    <span class="value">48px</span>
+                  </div>
+                  <div>
+                    <span class="label">Tracking</span>
+                    <span class="value">0px</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </label>
+          <label for="h4radio" class="expansion-control">
+            <div class="type-scale-item">
 
-            <div id="h4" class="type-scale-example headline-example">
-              <span class="sentance" style="font-size: 34px; font-weight: normal; letter-spacing: 0.25px;">Almost before
-                we knew it, we had left the ground.</span>
-              <div class="type-scale-variable">
-                <span>Headline 4</span>
-              </div>
-              <input type="radio" id="h4radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-meta">
-                <div>
-                  <span class="label">Typeface</span>
-                  <span class="value">Roboto</span>
+              <div id="h4" class="type-scale-example headline-example">
+                <span class="sentance" style="font-size: 34px; font-weight: normal; letter-spacing: 0.25px;">Almost before
+                  we knew it, we had left the ground.</span>
+                <div class="type-scale-variable">
+                  <span>Headline 4</span>
                 </div>
-                <div>
-                  <span class="label">Weight</span>
-                  <span class="value">Normal</span>
-                </div>
-                <div>
-                  <span class="label">Size</span>
-                  <span class="value">34px</span>
-                </div>
-                <div>
-                  <span class="label">Tracking</span>
-                  <span class="value">0.25px</span>
+                <input type="radio" id="h4radio" name="exp1" class="expansion-radio">
+                <div class="type-scale-meta">
+                  <div>
+                    <span class="label">Typeface</span>
+                    <span class="value">Roboto</span>
+                  </div>
+                  <div>
+                    <span class="label">Weight</span>
+                    <span class="value">Normal</span>
+                  </div>
+                  <div>
+                    <span class="label">Size</span>
+                    <span class="value">34px</span>
+                  </div>
+                  <div>
+                    <span class="label">Tracking</span>
+                    <span class="value">0.25px</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </label>
-        <label for="h5radio" class="expansion-control">
-          <div class="type-scale-item">
+          </label>
+          <label for="h5radio" class="expansion-control">
+            <div class="type-scale-item">
 
-            <div id="h5" class="type-scale-example headline-example">
-              <span class="sentance" style="font-size: 24px; font-weight: normal; letter-spacing: 0px;">A shining
-                crescent far beneath the flying vessel.</span>
-              <div class="type-scale-variable">
-                <span>Headline 5</span>
-              </div>
-              <input type="radio" id="h5radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-meta">
-                <div>
-                  <span class="label">Typeface</span>
-                  <span class="value">Roboto</span>
+              <div id="h5" class="type-scale-example headline-example">
+                <span class="sentance" style="font-size: 24px; font-weight: normal; letter-spacing: 0px;">A shining
+                  crescent far beneath the flying vessel.</span>
+                <div class="type-scale-variable">
+                  <span>Headline 5</span>
                 </div>
-                <div>
-                  <span class="label">Weight</span>
-                  <span class="value">Normal</span>
-                </div>
-                <div>
-                  <span class="label">Size</span>
-                  <span class="value">24px</span>
-                </div>
-                <div>
-                  <span class="label">Tracking</span>
-                  <span class="value">0px</span>
+                <input type="radio" id="h5radio" name="exp1" class="expansion-radio">
+                <div class="type-scale-meta">
+                  <div>
+                    <span class="label">Typeface</span>
+                    <span class="value">Roboto</span>
+                  </div>
+                  <div>
+                    <span class="label">Weight</span>
+                    <span class="value">Normal</span>
+                  </div>
+                  <div>
+                    <span class="label">Size</span>
+                    <span class="value">24px</span>
+                  </div>
+                  <div>
+                    <span class="label">Tracking</span>
+                    <span class="value">0px</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </label>
-        <label for="h6radio" class="expansion-control">
-          <div class="type-scale-item">
+          </label>
+          <label for="h6radio" class="expansion-control">
+            <div class="type-scale-item">
 
-            <div id="h6" class="type-scale-example headline-example">
-              <span class="sentance" style="font-size: 20px; font-weight: 500; letter-spacing: 0.15px;">It was going to
-                be a lonely trip back.</span>
-              <div class="type-scale-variable">
-                <span>Headline 6</span>
-              </div>
-              <input type="radio" id="h6radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-meta">
-                <div>
-                  <span class="label">Typeface</span>
-                  <span class="value">Roboto</span>
+              <div id="h6" class="type-scale-example headline-example">
+                <span class="sentance" style="font-size: 20px; font-weight: 500; letter-spacing: 0.15px;">It was going to
+                  be a lonely trip back.</span>
+                <div class="type-scale-variable">
+                  <span>Headline 6</span>
                 </div>
-                <div>
-                  <span class="label">Weight</span>
-                  <span class="value">Bold</span>
-                </div>
-                <div>
-                  <span class="label">Size</span>
-                  <span class="value">20px</span>
-                </div>
-                <div>
-                  <span class="label">Tracking</span>
-                  <span class="value">0.15px</span>
+                <input type="radio" id="h6radio" name="exp1" class="expansion-radio">
+                <div class="type-scale-meta">
+                  <div>
+                    <span class="label">Typeface</span>
+                    <span class="value">Roboto</span>
+                  </div>
+                  <div>
+                    <span class="label">Weight</span>
+                    <span class="value">Bold</span>
+                  </div>
+                  <div>
+                    <span class="label">Size</span>
+                    <span class="value">20px</span>
+                  </div>
+                  <div>
+                    <span class="label">Tracking</span>
+                    <span class="value">0.15px</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </label>
-        <label for="s1radio" class="expansion-control">
-          <div class="type-scale-item">
+          </label>
+          <label for="s1radio" class="expansion-control">
+            <div class="type-scale-item">
 
-            <div id="subtitle1" class="type-scale-example headline-example">
-              <span class="sentence" style="font-size: 16px; font-weight: normal; letter-spacing: 0.15px;">Mist
-                enveloped the ship three hours out from port.</span>
-              <div class="type-scale-variable">
-                <span>Subtitle 1</span>
-              </div>
-              <input type="radio" id="s1radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-meta">
-                <div>
-                  <span class="label">Typeface</span>
-                  <span class="value">Roboto</span>
+              <div id="subtitle1" class="type-scale-example headline-example">
+                <span class="sentence" style="font-size: 16px; font-weight: normal; letter-spacing: 0.15px;">Mist
+                  enveloped the ship three hours out from port.</span>
+                <div class="type-scale-variable">
+                  <span>Subtitle 1</span>
                 </div>
-                <div>
-                  <span class="label">Weight</span>
-                  <span class="value">Normal</span>
-                </div>
-                <div>
-                  <span class="label">Size</span>
-                  <span class="value">16px</span>
-                </div>
-                <div>
-                  <span class="label">Tracking</span>
-                  <span class="value">0.15px</span>
+                <input type="radio" id="s1radio" name="exp1" class="expansion-radio">
+                <div class="type-scale-meta">
+                  <div>
+                    <span class="label">Typeface</span>
+                    <span class="value">Roboto</span>
+                  </div>
+                  <div>
+                    <span class="label">Weight</span>
+                    <span class="value">Normal</span>
+                  </div>
+                  <div>
+                    <span class="label">Size</span>
+                    <span class="value">16px</span>
+                  </div>
+                  <div>
+                    <span class="label">Tracking</span>
+                    <span class="value">0.15px</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </label>
-        <label for="s2radio" class="expansion-control">
-          <div class="type-scale-item">
+          </label>
+          <label for="s2radio" class="expansion-control">
+            <div class="type-scale-item">
 
-            <div id="subtitle2" class="type-scale-example headline-example">
-              <span style="font-size: 14px; font-weight: 500; letter-spacing: 0.1px;" class="sentance">My two natures
-                had memory in common.</span>
-              <div class="type-scale-variable">
-                <span>Subtitle 2</span>
-              </div>
-              <input type="radio" id="s2radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-meta">
-                <div>
-                  <span class="label">Typeface</span>
-                  <span class="value">Roboto</span>
+              <div id="subtitle2" class="type-scale-example headline-example">
+                <span style="font-size: 14px; font-weight: 500; letter-spacing: 0.1px;" class="sentance">My two natures
+                  had memory in common.</span>
+                <div class="type-scale-variable">
+                  <span>Subtitle 2</span>
                 </div>
-                <div>
-                  <span class="label">Weight</span>
-                  <span class="value">Bold</span>
-                </div>
-                <div>
-                  <span class="label">Size</span>
-                  <span class="value">14px</span>
-                </div>
-                <div>
-                  <span class="label">Tracking</span>
-                  <span class="value">0.1px</span>
+                <input type="radio" id="s2radio" name="exp1" class="expansion-radio">
+                <div class="type-scale-meta">
+                  <div>
+                    <span class="label">Typeface</span>
+                    <span class="value">Roboto</span>
+                  </div>
+                  <div>
+                    <span class="label">Weight</span>
+                    <span class="value">Bold</span>
+                  </div>
+                  <div>
+                    <span class="label">Size</span>
+                    <span class="value">14px</span>
+                  </div>
+                  <div>
+                    <span class="label">Tracking</span>
+                    <span class="value">0.1px</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </label>
-        <label for="body1radio" class="expansion-control">
-          <div class="type-scale-item">
+          </label>
+          <label for="body1radio" class="expansion-control">
+            <div class="type-scale-item">
 
-            <div id="body1" class="type-scale-example body-example">
-              <span class="sentance" style="font-size: 16px; font-weight: normal; letter-spacing: 0.5px;">Silver mist
-                suffused the deck of the ship.</span>
-              <div class="type-scale-variable">
-                <span>Body 1</span>
-              </div>
-              <input type="radio" id="body1radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-meta">
-                <div>
-                  <span class="label">Typeface</span>
-                  <span class="value">Roboto</span>
+              <div id="body1" class="type-scale-example body-example">
+                <span class="sentance" style="font-size: 16px; font-weight: normal; letter-spacing: 0.5px;">Silver mist
+                  suffused the deck of the ship.</span>
+                <div class="type-scale-variable">
+                  <span>Body 1</span>
                 </div>
-                <div>
-                  <span class="label">Weight</span>
-                  <span class="value">Normal</span>
-                </div>
-                <div>
-                  <span class="label">Size</span>
-                  <span class="value">16px</span>
-                </div>
-                <div>
-                  <span class="label">Tracking</span>
-                  <span class="value">0.5px</span>
+                <input type="radio" id="body1radio" name="exp1" class="expansion-radio">
+                <div class="type-scale-meta">
+                  <div>
+                    <span class="label">Typeface</span>
+                    <span class="value">Roboto</span>
+                  </div>
+                  <div>
+                    <span class="label">Weight</span>
+                    <span class="value">Normal</span>
+                  </div>
+                  <div>
+                    <span class="label">Size</span>
+                    <span class="value">16px</span>
+                  </div>
+                  <div>
+                    <span class="label">Tracking</span>
+                    <span class="value">0.5px</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </label>
-        <label for="body2radio" class="expansion-control">
-          <div class="type-scale-item">
+          </label>
+          <label for="body2radio" class="expansion-control">
+            <div class="type-scale-item">
 
-            <div id="body2" class="type-scale-example body-example">
-              <span class="sentance" style="font-size: 14px; font-weight: normal; letter-spacing: 0.25px;">The face of
-                the moon was in shadow.</span>
-              <div class="type-scale-variable">
-                <span>Body 2</span>
-              </div>
-              <input type="radio" id="body2radio" name="exp1" class="expansion-radio">
-              <div class="type-scale-meta">
-                <div>
-                  <span class="label">Typeface</span>
-                  <span class="value">Roboto</span>
+              <div id="body2" class="type-scale-example body-example">
+                <span class="sentance" style="font-size: 14px; font-weight: normal; letter-spacing: 0.25px;">The face of
+                  the moon was in shadow.</span>
+                <div class="type-scale-variable">
+                  <span>Body 2</span>
                 </div>
-                <div>
-                  <span class="label">Weight</span>
-                  <span class="value">Normal</span>
-                </div>
-                <div>
-                  <span class="label">Size</span>
-                  <span class="value">14px</span>
-                </div>
-                <div>
-                  <span class="label">Tracking</span>
-                  <span class="value">0.25px</span>
+                <input type="radio" id="body2radio" name="exp1" class="expansion-radio">
+                <div class="type-scale-meta">
+                  <div>
+                    <span class="label">Typeface</span>
+                    <span class="value">Roboto</span>
+                  </div>
+                  <div>
+                    <span class="label">Weight</span>
+                    <span class="value">Normal</span>
+                  </div>
+                  <div>
+                    <span class="label">Size</span>
+                    <span class="value">14px</span>
+                  </div>
+                  <div>
+                    <span class="label">Tracking</span>
+                    <span class="value">0.25px</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </label>
-        <label for="bradio" class="expansion-control">
-          <div class="type-scale-item">
+          </label>
+          <label for="bradio" class="expansion-control">
+            <div class="type-scale-item">
 
-            <div id="button" class="type-scale-example body-example">
-              <span class="sentance"
-                style="font-size: 14px; font-weight: 500; letter-spacing: 1.25px; text-transform: uppercase;">She stared
-                through the window at the stars.</span>
-              <div class="type-scale-variable">
-                <span>Button</span>
-              </div>
-              <input type="radio" id="bradio" name="exp1" class="expansion-radio">
-              <div class="type-scale-meta">
-                <div>
-                  <span class="label">Typeface</span>
-                  <span class="value">Roboto</span>
+              <div id="button" class="type-scale-example body-example">
+                <span class="sentance"
+                  style="font-size: 14px; font-weight: 500; letter-spacing: 1.25px; text-transform: uppercase;">She stared
+                  through the window at the stars.</span>
+                <div class="type-scale-variable">
+                  <span>Button</span>
                 </div>
-                <div>
-                  <span class="label">Weight</span>
-                  <span class="value">Bold</span>
-                </div>
-                <div>
-                  <span class="label">Size</span>
-                  <span class="value">14px</span>
-                </div>
-                <div>
-                  <span class="label">Tracking</span>
-                  <span class="value">1.25px</span>
+                <input type="radio" id="bradio" name="exp1" class="expansion-radio">
+                <div class="type-scale-meta">
+                  <div>
+                    <span class="label">Typeface</span>
+                    <span class="value">Roboto</span>
+                  </div>
+                  <div>
+                    <span class="label">Weight</span>
+                    <span class="value">Bold</span>
+                  </div>
+                  <div>
+                    <span class="label">Size</span>
+                    <span class="value">14px</span>
+                  </div>
+                  <div>
+                    <span class="label">Tracking</span>
+                    <span class="value">1.25px</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </label>
-        <label for="cradio" class="expansion-control">
-          <div class="type-scale-item">
+          </label>
+          <label for="cradio" class="expansion-control">
+            <div class="type-scale-item">
 
-            <div id="caption" class="type-scale-example body-example">
-              <span class="sentance" style="font-size: 12px; font-weight: normal; letter-spacing: 0.4px;">The recorded
-                voice scratched in the speaker.</span>
-              <div class="type-scale-variable">
-                <span>Caption</span>
-              </div>
-              <input type="radio" id="cradio" name="exp1" class="expansion-radio">
-              <div class="type-scale-meta">
-                <div>
-                  <span class="label">Typeface</span>
-                  <span class="value">Roboto</span>
+              <div id="caption" class="type-scale-example body-example">
+                <span class="sentance" style="font-size: 12px; font-weight: normal; letter-spacing: 0.4px;">The recorded
+                  voice scratched in the speaker.</span>
+                <div class="type-scale-variable">
+                  <span>Caption</span>
                 </div>
-                <div>
-                  <span class="label">Weight</span>
-                  <span class="value">Normal</span>
-                </div>
-                <div>
-                  <span class="label">Size</span>
-                  <span class="value">12px</span>
-                </div>
-                <div>
-                  <span class="label">Tracking</span>
-                  <span class="value">0.4px</span>
+                <input type="radio" id="cradio" name="exp1" class="expansion-radio">
+                <div class="type-scale-meta">
+                  <div>
+                    <span class="label">Typeface</span>
+                    <span class="value">Roboto</span>
+                  </div>
+                  <div>
+                    <span class="label">Weight</span>
+                    <span class="value">Normal</span>
+                  </div>
+                  <div>
+                    <span class="label">Size</span>
+                    <span class="value">12px</span>
+                  </div>
+                  <div>
+                    <span class="label">Tracking</span>
+                    <span class="value">0.4px</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </label>
-        <label for="oradio" class="expansion-control">
-          <div class="type-scale-item">
+          </label>
+          <label for="oradio" class="expansion-control">
+            <div class="type-scale-item">
 
-            <div id="overline" class="type-scale-example body-example">
-              <span style="font-size: 10px; font-weight: normal; letter-spacing: 1.5px; text-transform: uppercase;">The
-                sky was cloudless and of a deep dark blue.</span>
-              <div class="type-scale-variable">
-                <span>Overline</span>
-              </div>
-              <input type="radio" id="oradio" name="exp1" class="expansion-radio">
-              <div class="type-scale-meta">
-                <div>
-                  <span class="label">Typeface</span>
-                  <span class="value">Roboto</span>
+              <div id="overline" class="type-scale-example body-example">
+                <span style="font-size: 10px; font-weight: normal; letter-spacing: 1.5px; text-transform: uppercase;">The
+                  sky was cloudless and of a deep dark blue.</span>
+                <div class="type-scale-variable">
+                  <span>Overline</span>
                 </div>
-                <div>
-                  <span class="label">Weight</span>
-                  <span class="value">Normal</span>
-                </div>
-                <div>
-                  <span class="label">Size</span>
-                  <span class="value">10px</span>
-                </div>
-                <div>
-                  <span class="label">Tracking</span>
-                  <span class="value">1.5px</span>
+                <input type="radio" id="oradio" name="exp1" class="expansion-radio">
+                <div class="type-scale-meta">
+                  <div>
+                    <span class="label">Typeface</span>
+                    <span class="value">Roboto</span>
+                  </div>
+                  <div>
+                    <span class="label">Weight</span>
+                    <span class="value">Normal</span>
+                  </div>
+                  <div>
+                    <span class="label">Size</span>
+                    <span class="value">10px</span>
+                  </div>
+                  <div>
+                    <span class="label">Tracking</span>
+                    <span class="value">1.5px</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </label>
+          </label>
+        </section>
+        <section id="code-content" class="tab-content">
+          <h2>Web (.scss)</h2>
+          <pre class="code-sample">
+            <code class='code-block'>
+          </code></pre>
+        </section>
       </div>
     </div>
     <aside class="mdc-drawer meta-drawer">
