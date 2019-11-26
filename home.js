@@ -6,6 +6,8 @@ import { MDCTextField } from '@material/textfield';
 import { typography } from './type-vars';
 
 const primaryTypeSelect = new MDCSelect(document.querySelector('.primary-type-select'));
+const platformSelect = new MDCSelect(document.querySelector('.platform-select'));
+
 const secondaryTypeSelect = new MDCSelect(document.querySelector('.secondary-type-select'));
 const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
 
@@ -261,7 +263,60 @@ $mdc-typography-styles-caption: (
   return 'android code here'
 }
 else if (type === 'flutter') {
-  return 'flutter code here'
+  return `TextTheme(
+    display4: TextStyle(
+      fontFamily: ${typography.h1.typeface},
+      fontSize: ${typography.h1.size},
+    ),
+    display3: TextStyle(
+      fontFamily: ${typography.h2.typeface},
+      fontSize: ${typography.h2.size},
+    ),
+    display2: TextStyle(
+      fontFamily: ${typography.h3.typeface},
+      fontSize: ${typography.h3.size},
+    ),
+    display1: TextStyle(
+      fontFamily: ${typography.h4.typeface},
+      fontSize: ${typography.h4.size},
+    ),
+    headline: TextStyle(
+      fontFamily: ${typography.h5.typeface},
+      fontSize: ${typography.h5.size},
+    ),
+    title: TextStyle(
+      fontFamily: ${typography.h6.typeface},
+      fontSize: ${typography.h6.size},
+    ),
+    subhead: TextStyle(
+      fontFamily: ${typography.subtitle1.typeface},
+      fontSize: ${typography.subtitle1.size},
+    ),
+    body2: TextStyle(
+      fontFamily: ${typography.body1.typeface},
+      fontSize: ${typography.body1.size},
+    ),
+    body1: TextStyle(
+      fontFamily: ${typography.body2.typeface},
+      fontSize: ${typography.body2.size},
+    ),
+    caption: TextStyle(
+      fontFamily: ${typography.caption.typeface},
+      fontSize: ${typography.caption.size},
+    ),
+    button: TextStyle(
+      fontFamily: ${typography.button.typeface},
+      fontSize: ${typography.button.size},
+    ),
+    subtitle: TextStyle(
+      fontFamily: ${typography.subtitle2.typeface},
+      fontSize: ${typography.subtitle2.size},
+    ),
+    overline: TextStyle(
+      fontFamily: ${typography.overline.typeface},
+      fontSize: ${typography.overline.size},
+    ),
+  )`
 }
 }
 

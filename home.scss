@@ -69,6 +69,7 @@
   display: none;
 }
 
+.expansion-radio:hover + .type-scale-meta,
 .expansion-radio:checked + .type-scale-meta {
   opacity: 1;
   transform: translateY(0);
@@ -230,7 +231,6 @@
 .main-content {
   display: flex;
   flex-direction: column;
-  padding: 25px;
   margin: 0 auto 0 0;
   min-width: 510px;
 
@@ -239,7 +239,12 @@
     flex-direction: column;
     border-bottom: solid 1px lightgrey;
     min-height: 30px;
-    padding-top: 20px;
+    padding: 20px 20px 0 20px;
+    overflow: hidden;
+
+    &:hover {
+      background:#FAFAFA;
+    }
   }
 
   .type-scale-variable {
@@ -253,6 +258,7 @@
   .type-scale-example {
     display: flex;
     flex-direction: column;
+    z-index: 2;
 
     .sentance {
       align-self: flex-start;
@@ -304,4 +310,14 @@
   padding: 0 1rem 1rem 1rem;
   font-size: 14px;
   line-height: 1.4;
+}
+
+.tab-content {
+  width: 560px;
+}
+
+#code-content {
+  display: none;
+  padding: 20px;
+  box-sizing: border-box;
 }
