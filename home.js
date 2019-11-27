@@ -204,6 +204,16 @@ const switchToTab = (activatedTabId) => {
 //     });
 // }
 
+// Snake case conversion for Android Studio
+const snakeCase = (fontName) => {
+  return fontName.replace(/[^\w\s]/g, "").replace(/\s+/g, " ").toLowerCase().split(' ').join('_')
+}
+
+// URL from name for Google Fonts link
+const urlName = (fontName) => {
+  return fontName.replace(/ /g, '+')
+}
+
 const getCode = (type = 'web') => {
 if (type === 'web') {
   return `
@@ -261,14 +271,87 @@ $mdc-typography-styles-caption: (
 );`
 } else if (type === 'android') {
   return `
-//Import typeface in .xml
-  
-Code here for that
+&lt;resources&gt;
 
-//Specify code in .xml
+  &lt;style name="TextAppearance.MdcTypographyStyles.Headline1" parent="TextAppearance.MaterialComponents.Headline1"&gt;
+      &lt;item name="fontFamily"&gt;@font/${snakeCase(typography.h1.typeface)}&lt;/item&gt;
+      &lt;item name="android:fontFamily"&gt;@font/${snakeCase(typography.h1.typeface)}&lt;/item&gt;
+      &lt;item name="android:textSize"&gt;${typography.h1.size}sp&lt;/item&gt;
+  &lt;/style&gt;
 
-Code here for that
-  `
+  &lt;style name="TextAppearance.MdcTypographyStyles.Headline2" parent="TextAppearance.MaterialComponents.Headline2"&gt;
+      &lt;item name="fontFamily"&gt;@font/${snakeCase(typography.h2.typeface)}&lt;/item&gt;
+      &lt;item name="android:fontFamily"&gt;@font/${snakeCase(typography.h2.typeface)}&lt;/item&gt;
+      &lt;item name="android:textSize"&gt;${typography.h2.size}sp&lt;/item&gt;
+  &lt;/style&gt;
+
+  &lt;style name="TextAppearance.MdcTypographyStyles.Headline3" parent="TextAppearance.MaterialComponents.Headline3"&gt;
+      &lt;item name="fontFamily"&gt;@font/${snakeCase(typography.h3.typeface)}&lt;/item&gt;
+      &lt;item name="android:fontFamily"&gt;@font/${snakeCase(typography.h3.typeface)}&lt;/item&gt;
+      &lt;item name="android:textSize"&gt;${typography.h3.size}sp&lt;/item&gt;
+  &lt;/style&gt;
+
+  &lt;style name="TextAppearance.MdcTypographyStyles.Headline4" parent="TextAppearance.MaterialComponents.Headline4"&gt;
+      &lt;item name="fontFamily"&gt;@font/${snakeCase(typography.h4.typeface)}&lt;/item&gt;
+      &lt;item name="android:fontFamily"&gt;@font/${snakeCase(typography.h4.typeface)}&lt;/item&gt;
+      &lt;item name="android:textSize"&gt;${typography.h4.size}sp&lt;/item&gt;
+  &lt;/style&gt;
+
+  &lt;style name="TextAppearance.MdcTypographyStyles.Headline5" parent="TextAppearance.MaterialComponents.Headline5"&gt;
+      &lt;item name="fontFamily"&gt;@font/${snakeCase(typography.h5.typeface)}&lt;/item&gt;
+      &lt;item name="android:fontFamily"&gt;@font/${snakeCase(typography.h5.typeface)}&lt;/item&gt;
+      &lt;item name="android:textSize"&gt;${typography.h5.size}sp&lt;/item&gt;
+  &lt;/style&gt;
+
+  &lt;style name="TextAppearance.MdcTypographyStyles.Headline6" parent="TextAppearance.MaterialComponents.Headline6"&gt;
+      &lt;item name="fontFamily"&gt;@font/${snakeCase(typography.h6.typeface)}&lt;/item&gt;
+      &lt;item name="android:fontFamily"&gt;@font/${snakeCase(typography.h6.typeface)}&lt;/item&gt;
+      &lt;item name="android:textSize"&gt;${typography.h6.size}sp&lt;/item&gt;
+  &lt;/style&gt;
+
+  &lt;style name="TextAppearance.MdcTypographyStyles.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1"&gt;
+      &lt;item name="fontFamily"&gt;@font/${snakeCase(typography.subtitle1.typeface)}&lt;/item&gt;
+      &lt;item name="android:fontFamily"&gt;@font/${snakeCase(typography.subtitle1.typeface)}&lt;/item&gt;
+      &lt;item name="android:textSize"&gt;${typography.subtitle1.size}sp&lt;/item&gt;
+  &lt;/style&gt;
+
+  &lt;style name="TextAppearance.MdcTypographyStyles.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2"&gt;
+      &lt;item name="fontFamily"&gt;@font/${snakeCase(typography.subtitle2.typeface)}&lt;/item&gt;
+      &lt;item name="android:fontFamily"&gt;@font/${snakeCase(typography.subtitle2.typeface)}&lt;/item&gt;
+      &lt;item name="android:textSize"&gt;${typography.subtitle2.size}sp&lt;/item&gt;
+  &lt;/style&gt;
+
+  &lt;style name="TextAppearance.MdcTypographyStyles.Body1" parent="TextAppearance.MaterialComponents.Body1"&gt;
+      &lt;item name="fontFamily"&gt;@font/${snakeCase(typography.body1.typeface)}&lt;/item&gt;
+      &lt;item name="android:fontFamily"&gt;@font/${snakeCase(typography.body1.typeface)}&lt;/item&gt;
+      &lt;item name="android:textSize"&gt;${typography.body1.size}sp&lt;/item&gt;
+  &lt;/style&gt;
+
+  &lt;style name="TextAppearance.MdcTypographyStyles.Body2" parent="TextAppearance.MaterialComponents.Body2"&gt;
+      &lt;item name="fontFamily"&gt;@font/${snakeCase(typography.body2.typeface)}&lt;/item&gt;
+      &lt;item name="android:fontFamily"&gt;@font/${snakeCase(typography.body2.typeface)}&lt;/item&gt;
+      &lt;item name="android:textSize"&gt;${typography.body2.size}sp&lt;/item&gt;
+  &lt;/style&gt;
+
+  &lt;style name="TextAppearance.MdcTypographyStyles.Button" parent="TextAppearance.MaterialComponents.Button"&gt;
+      &lt;item name="fontFamily"&gt;@font/${snakeCase(typography.button.typeface)}&lt;/item&gt;
+      &lt;item name="android:fontFamily"&gt;@font/${snakeCase(typography.button.typeface)}&lt;/item&gt;
+      &lt;item name="android:textSize"&gt;${typography.button.size}sp&lt;/item&gt;
+  &lt;/style&gt;
+
+  &lt;style name="TextAppearance.MdcTypographyStyles.Caption" parent="TextAppearance.MaterialComponents.Caption"&gt;
+      &lt;item name="fontFamily"&gt;@font/${snakeCase(typography.caption.typeface)}&lt;/item&gt;
+      &lt;item name="android:fontFamily"&gt;@font/${snakeCase(typography.caption.typeface)}&lt;/item&gt;
+      &lt;item name="android:textSize"&gt;${typography.caption.size}sp&lt;/item&gt;
+  &lt;/style&gt;
+
+  &lt;style name="TextAppearance.MdcTypographyStyles.Overline" parent="TextAppearance.MaterialComponents.Overline"&gt;
+      &lt;item name="fontFamily"&gt;@font/${snakeCase(typography.overline.typeface)}&lt;/item&gt;
+      &lt;item name="android:fontFamily"&gt;@font/${snakeCase(typography.overline.typeface)}&lt;/item&gt;
+      &lt;item name="android:textSize"&gt;${typography.overline.size}sp&lt;/item&gt;
+  &lt;/style&gt;
+
+&lt;/resources&gt;`
 }
 else if (type === 'flutter') {
   return `TextTheme(
@@ -328,4 +411,26 @@ else if (type === 'flutter') {
 }
 }
 
+const getInstruction = (type = 'web') => {
+  if (type === 'web') {
+    return `Please see Google fonts for further installation instruction.`
+  } else if (type === 'android') {
+    return `Add the font to your project using Downloadable Fonts via Android Studio.`
+  } else if (type === 'flutter') {
+    return ``
+  }
+}
+
+const getLink = (type = 'web') => {
+  if (type === 'web') {
+    return `https://fonts.google.com/specimen/${urlName(typography.h1.typeface)}?selection.family=${urlName(typography.h1.typeface)}`
+  } else if (type === 'android') {
+    return `https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts#via-android-studio`
+  } else if (type === 'flutter') {
+    return ``
+  }
+}
+
+document.querySelector('.platform-instruction').innerHTML = getInstruction('android')
+document.querySelector('.platform-link').href = getLink('android')
 document.querySelector('.code-block').innerHTML = getCode('android')
