@@ -260,7 +260,15 @@ $mdc-typography-styles-caption: (
   font-size: ${typography.caption.size};
 );`
 } else if (type === 'android') {
-  return 'android code here'
+  return `
+//Import typeface in .xml
+  
+Code here for that
+
+//Specify code in .xml
+
+Code here for that
+  `
 }
 else if (type === 'flutter') {
   return `TextTheme(
@@ -320,4 +328,4 @@ else if (type === 'flutter') {
 }
 }
 
-document.querySelector('.code-block').innerHTML = getCode()
+document.querySelector('.code-block').innerHTML = getCode('android')
