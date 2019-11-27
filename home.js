@@ -407,11 +407,12 @@ TextTheme(
 
 const getInstruction = (type = 'web') => {
   if (type === 'web') {
-    return `See <a href="https://fonts.google.com/specimen/${urlName(typography.h1.typeface)}?selection.family=${urlName(typography.h1.typeface)}">${typography.h1.typeface} on Google fonts</a> for further installation instruction on how to add the font to your project.`
+    return `See <a href="https://fonts.google.com/specimen/${urlName(typography.h1.typeface)}?selection.family=${urlName(typography.h1.typeface)}">${typography.h1.typeface} on Google fonts</a> for further installation instruction.`
   } else if (type === 'android') {
-    return `Add the font to your project using <a href="https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts#via-android-studio">Downloadable Fonts</a> via Android Studio.`
+    return `Please add the font via Android Studio using <a href="https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts#via-android-studio">Downloadable Fonts</a>.`
   } else if (type === 'flutter') {
-    return ``
+    return `See <a href="https://flutter.dev/docs/cookbook/design/fonts">flutter.dev</a> for instructions on how to add this font to your project.
+    `
   }
 }
 
