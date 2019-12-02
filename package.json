@@ -31,6 +31,7 @@
     "@material/textfield": "^1.0.1",
     "@material/typography": "^1.0.0",
     "fontmetrics": "^1.0.0",
-    "material-design-icons": "^3.0.1"
+    "material-design-icons": "^3.0.1",
+    "semantic-ui-dropdown": "^2.4.1"
   }
 }

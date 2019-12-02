@@ -495,7 +495,8 @@
               </span>
             </div>
           </div>
-          <div class="mdc-select primary-type-select">
+          
+          <!-- <div class="mdc-select primary-type-select">
             <div class="mdc-select__anchor">
               <i class="mdc-select__dropdown-icon"></i>
               <div class="mdc-select__selected-text"></div>
@@ -523,7 +524,13 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </div> -->
+          <form autocomplete="off">
+            <div class="autocomplete" style="width:300px;">
+              <input id="myInput" type="text" name="myCountry" placeholder="Pick a Typeface">
+            </div>
+          </form>
+
           <div class="font-selection-section second">
             <div class="font-header-container">
               <span class="primary-font-header">Body & Captions</span>
@@ -580,6 +587,7 @@
 
 
   <script src="bundle-home.js" async></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 </body>
 
 </html>
