@@ -1,4 +1,4 @@
-export const typography = {
+export let typography = {
     h1: {
         typeface: 'Roboto',
         size: 96,
