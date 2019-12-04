@@ -3,7 +3,7 @@ import { MDCSelect } from '@material/select';
 import FontMetrics from 'fontmetrics'
 import { MDCRipple } from '@material/ripple';
 import { MDCTextField } from '@material/textfield';
-import { typography } from './type-vars';
+import { typography, typographyConst } from './type-vars';
 import { platform } from 'os';
 import { fonts } from "./google-fonts";
 
@@ -248,6 +248,45 @@ var event = new Event('input', {
   cancelable: true,
 });
 
+const ROBOTO_X_HEIGHT_FRACTION = FontMetrics({fontFamily: 'Roboto'}).xHeight;
+
+function myFunction(selectedFont) {
+    const typeExamples = document.querySelectorAll(".headline-example");
+    typeExamples.forEach(function (el) {
+        let font = FontMetrics({
+            fontFamily: selectedFont,
+        });
+        let textType = el.id;
+        const adjustedFont = getAdjustmentFactor(font, typographyConst[textType].size)
+
+        typography[textType].typeface = selectedFont;
+        typography[textType].size = adjustedFont;
+        el.children[0].style.fontSize = adjustedFont + 'px';
+        el.children[0].style.fontFamily = selectedFont;
+    });
+}
+
+function myFunction2(selectedFont) {
+    const typeExamples = document.querySelectorAll(".body-example");
+    typeExamples.forEach(function (el) {
+        let font = FontMetrics({
+            fontFamily: selectedFont,
+        });
+        let textType = el.id;
+        const adjustedFont = getAdjustmentFactor(font, typographyConst[textType].size)
+
+        typography[textType].typeface = selectedFont;
+        typography[textType].size = adjustedFont;
+        el.children[0].style.fontSize = adjustedFont + 'px';
+        el.children[0].style.fontFamily = selectedFont;
+    });
+}
+
+function getAdjustmentFactor(font, size) {
+    const fontXHeightFraction = font.xHeight / size;
+    return ROBOTO_X_HEIGHT_FRACTION / fontXHeightFraction;
+}
+
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
@@ -279,33 +318,26 @@ function autocomplete(inp, arr) {
               /*insert the value for the autocomplete text field:*/
               inp.value = this.getElementsByTagName("input")[0].value;
               let fontValue = this.getElementsByTagName("input")[0].dataset.value;
+              
               WebFont.load({
                 google: {
                   families: [fontValue]
+                },
+                active: function () {
+                  console.log(fontValue);
+                  myFunction(inp.value);
+
+                  document.querySelectorAll('.h-s-typeface-value').forEach(function (element) {
+                      element.innerHTML = inp.value;
+
+                  });
+                  document.querySelectorAll('.h-s-size-value').forEach(function (element) {
+                    element.innerHTML = Math.round(typography[element.parentNode.parentNode.parentNode.id].size) + 'px';
+                  });
+                  document.querySelector('.platform-instruction').innerHTML = getInstruction();
+                  document.querySelector('.code-block').innerHTML = getCode();
                 }
               });
-              document.getElementById('h1').children[0].style.fontFamily = inp.value;
-              document.getElementById('h2').children[0].style.fontFamily = inp.value;
-              document.getElementById('h3').children[0].style.fontFamily = inp.value;
-              document.getElementById('h4').children[0].style.fontFamily = inp.value;
-              document.getElementById('h5').children[0].style.fontFamily = inp.value;
-              document.getElementById('h6').children[0].style.fontFamily = inp.value;
-              document.getElementById('subtitle1').children[0].style.fontFamily = inp.value;
-              document.getElementById('subtitle2').children[0].style.fontFamily = inp.value;
-              typography.h1.typeface = inp.value;
-              typography.h2.typeface = inp.value;
-              typography.h3.typeface = inp.value;
-              typography.h4.typeface = inp.value;
-              typography.h5.typeface = inp.value;
-              typography.h6.typeface = inp.value;
-              typography.subtitle1.typeface = inp.value;
-              typography.subtitle2.typeface = inp.value;
-
-              document.querySelectorAll('.h-s-typeface-value').forEach(function (element) {
-                  element.innerHTML = inp.value;
-              });
-              document.querySelector('.platform-instruction').innerHTML = getInstruction()
-              document.querySelector('.code-block').innerHTML = getCode()
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();
@@ -349,30 +381,22 @@ function autocomplete(inp, arr) {
               WebFont.load({
                 google: {
                   families: [fontValue]
+                },
+                active: function () {
+                  console.log(fontValue);
+                  myFunction(inp.value);
+
+                  document.querySelectorAll('.h-s-typeface-value').forEach(function (element) {
+                      element.innerHTML = inp.value;
+
+                  });
+                  document.querySelectorAll('.h-s-size-value').forEach(function (element) {
+                    element.innerHTML = Math.round(typography[element.parentNode.parentNode.parentNode.id].size) + 'px';
+                  });
+                  document.querySelector('.platform-instruction').innerHTML = getInstruction();
+                  document.querySelector('.code-block').innerHTML = getCode();
                 }
               });
-              document.getElementById('h1').children[0].style.fontFamily = inp.value;
-              document.getElementById('h2').children[0].style.fontFamily = inp.value;
-              document.getElementById('h3').children[0].style.fontFamily = inp.value;
-              document.getElementById('h4').children[0].style.fontFamily = inp.value;
-              document.getElementById('h5').children[0].style.fontFamily = inp.value;
-              document.getElementById('h6').children[0].style.fontFamily = inp.value;
-              document.getElementById('subtitle1').children[0].style.fontFamily = inp.value;
-              document.getElementById('subtitle2').children[0].style.fontFamily = inp.value;
-              typography.h1.typeface = inp.value;
-              typography.h2.typeface = inp.value;
-              typography.h3.typeface = inp.value;
-              typography.h4.typeface = inp.value;
-              typography.h5.typeface = inp.value;
-              typography.h6.typeface = inp.value;
-              typography.subtitle1.typeface = inp.value;
-              typography.subtitle2.typeface = inp.value;
-
-              document.querySelectorAll('.h-s-typeface-value').forEach(function (element) {
-                  element.innerHTML = inp.value;
-              });
-              document.querySelector('.platform-instruction').innerHTML = getInstruction()
-              document.querySelector('.code-block').innerHTML = getCode()
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();
@@ -480,24 +504,22 @@ function autocomplete2(inp, arr) {
               WebFont.load({
                 google: {
                   families: [fontValue]
+                },
+                active: function () {
+                  console.log(fontValue);
+                  myFunction2(inp.value);
+
+                  document.querySelectorAll('.b-c-typeface-value').forEach(function (element) {
+                      element.innerHTML = inp.value;
+
+                  });
+                  document.querySelectorAll('.b-c-size-value').forEach(function (element) {
+                    element.innerHTML = Math.round(typography[element.parentNode.parentNode.parentNode.id].size) + 'px';
+                  });
+                  document.querySelector('.platform-instruction').innerHTML = getInstruction();
+                  document.querySelector('.code-block').innerHTML = getCode();
                 }
               });
-              document.getElementById('body1').children[0].style.fontFamily = inp.value;
-              document.getElementById('body2').children[0].style.fontFamily = inp.value;
-              document.getElementById('caption').children[0].style.fontFamily = inp.value;
-              document.getElementById('overline').children[0].style.fontFamily = inp.value;
-              document.getElementById('button').children[0].style.fontFamily = inp.value;
-              typography.body1.typeface = inp.value;
-              typography.body2.typeface = inp.value;
-              typography.caption.typeface = inp.value;
-              typography.overline.typeface = inp.value;
-              typography.button.typeface = inp.value;
-
-              document.querySelectorAll('.b-c-typeface-value').forEach(function (element) {
-                  element.innerHTML = inp.value;
-              });
-              document.querySelector('.platform-instruction').innerHTML = getInstruction()
-              document.querySelector('.code-block').innerHTML = getCode()
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();
@@ -541,24 +563,22 @@ function autocomplete2(inp, arr) {
               WebFont.load({
                 google: {
                   families: [fontValue]
+                },
+                active: function () {
+                  console.log(fontValue);
+                  myFunction2(inp.value);
+
+                  document.querySelectorAll('.b-c-typeface-value').forEach(function (element) {
+                      element.innerHTML = inp.value;
+
+                  });
+                  document.querySelectorAll('.b-c-size-value').forEach(function (element) {
+                    element.innerHTML = Math.round(typography[element.parentNode.parentNode.parentNode.id].size) + 'px';
+                  });
+                  document.querySelector('.platform-instruction').innerHTML = getInstruction();
+                  document.querySelector('.code-block').innerHTML = getCode();
                 }
               });
-              document.getElementById('body1').children[0].style.fontFamily = inp.value;
-              document.getElementById('body2').children[0].style.fontFamily = inp.value;
-              document.getElementById('caption').children[0].style.fontFamily = inp.value;
-              document.getElementById('overline').children[0].style.fontFamily = inp.value;
-              document.getElementById('button').children[0].style.fontFamily = inp.value;
-              typography.body1.typeface = inp.value;
-              typography.body2.typeface = inp.value;
-              typography.caption.typeface = inp.value;
-              typography.overline.typeface = inp.value;
-              typography.button.typeface = inp.value;
-
-              document.querySelectorAll('.b-c-typeface-value').forEach(function (element) {
-                  element.innerHTML = inp.value;
-              });
-              document.querySelector('.platform-instruction').innerHTML = getInstruction()
-              document.querySelector('.code-block').innerHTML = getCode()
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();

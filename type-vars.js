@@ -92,3 +92,58 @@ export let typography = {
     }
 }
 
+export const typographyConst = {
+    h1: {
+        typeface: 'Roboto',
+        size: 96,
+    },
+    h2: {
+        typeface: 'Roboto',
+        size: 60,
+    },
+    h3: {
+        typeface: 'Roboto',
+        size: 48,
+    },
+    h4: {
+        typeface: 'Roboto',
+        size: 34,
+    },
+    h5: {
+        typeface: 'Roboto',
+        size: 24,
+    },
+    h6: {
+        typeface: 'Roboto',
+        size: 20,
+    },
+    subtitle1: {
+        typeface: 'Roboto',
+        size: 16,
+    },
+    subtitle2: {
+        typeface: 'Roboto',
+        size: 14,
+    },
+    body1: {
+        typeface: 'Roboto',
+        size: 16,
+    },
+    body2: {
+        typeface: 'Roboto',
+        size: 14,
+    },
+    button: {
+        typeface: 'Roboto',
+        size: 14,
+    },
+    caption: {
+        typeface: 'Roboto',
+        size: 12,
+    },
+    overline: {
+        typeface: 'Roboto',
+        size: 10,
+    }
+}
+
