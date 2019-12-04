@@ -260,7 +260,7 @@ function myFunction(selectedFont) {
         const adjustedFont = getAdjustmentFactor(font, typographyConst[textType].size)
 
         typography[textType].typeface = selectedFont;
-        typography[textType].size = adjustedFont;
+        typography[textType].size = Math.round(adjustedFont);
         el.children[0].style.fontSize = adjustedFont + 'px';
         el.children[0].style.fontFamily = selectedFont;
     });
@@ -276,7 +276,7 @@ function myFunction2(selectedFont) {
         const adjustedFont = getAdjustmentFactor(font, typographyConst[textType].size)
 
         typography[textType].typeface = selectedFont;
-        typography[textType].size = adjustedFont;
+        typography[textType].size = Math.round(adjustedFont);
         el.children[0].style.fontSize = adjustedFont + 'px';
         el.children[0].style.fontFamily = selectedFont;
     });
@@ -324,7 +324,6 @@ function autocomplete(inp, arr) {
                   families: [fontValue]
                 },
                 active: function () {
-                  console.log(fontValue);
                   myFunction(inp.value);
 
                   document.querySelectorAll('.h-s-typeface-value').forEach(function (element) {
@@ -383,7 +382,6 @@ function autocomplete(inp, arr) {
                   families: [fontValue]
                 },
                 active: function () {
-                  console.log(fontValue);
                   myFunction(inp.value);
 
                   document.querySelectorAll('.h-s-typeface-value').forEach(function (element) {
@@ -506,7 +504,6 @@ function autocomplete2(inp, arr) {
                   families: [fontValue]
                 },
                 active: function () {
-                  console.log(fontValue);
                   myFunction2(inp.value);
 
                   document.querySelectorAll('.b-c-typeface-value').forEach(function (element) {
@@ -565,7 +562,6 @@ function autocomplete2(inp, arr) {
                   families: [fontValue]
                 },
                 active: function () {
-                  console.log(fontValue);
                   myFunction2(inp.value);
 
                   document.querySelectorAll('.b-c-typeface-value').forEach(function (element) {
