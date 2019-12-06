@@ -31,7 +31,7 @@
 }
 
 .type-scale-meta {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   transform: translateX(-60px);
   font-size: 12px;
@@ -69,10 +69,12 @@
   display: none;
 }
 
-.expansion-radio:hover + .type-scale-meta,
 .expansion-radio:checked + .type-scale-meta {
   opacity: 1;
   transform: translateY(0);
+}
+.expansion-radio:checked + .type-scale-item {
+  border-bottom: solid 1px lightgrey;
 }
 
 .mdc-tab-bar {
@@ -182,7 +184,8 @@
   /* Position the tooltip */
   position: absolute;
   z-index: 2;
-  margin-top: 40px;
+  margin-top: 48px;
+  left: 462px;
 }
 
 .tooltip:hover .tooltiptext {
@@ -237,10 +240,11 @@
   .type-scale-item {
     display: flex;
     flex-direction: column;
-    border-bottom: solid 1px lightgrey;
+    //border-bottom: solid 1px lightgrey;
     min-height: 30px;
     padding: 20px 20px 0 20px;
     overflow: hidden;
+    cursor: pointer;
 
     &:hover {
       background:#FAFAFA;
@@ -260,7 +264,7 @@
     flex-direction: column;
     z-index: 2;
 
-    .sentance {
+    .sentence {
       align-self: flex-start;
       white-space: nowrap;
       text-overflow: clip;
@@ -290,6 +294,7 @@
 
 .drawer-content-header {
   font-size: 14px;
+  color: rgba(0, 0, 0, .80);
   margin: 18px 0;
   padding-left: 12px;
   padding-bottom: 14px;
@@ -306,7 +311,8 @@
 }
 
 .code-sample {
-  background: whitesmoke;
+  font-family: 'Roboto Mono';
+//  background: whitesmoke;
   padding: 0 1rem 1rem 1rem;
   font-size: 14px;
   line-height: 1.4;
@@ -323,12 +329,15 @@
   box-sizing: border-box;
 }
 
-
+.platform-instruction {
+  color: rgba(0, 0, 0, .80);
+  font-size: 14px;
+}
 
 
 * { box-sizing: border-box; }
 body {
-  font: 16px Arial;
+  font: 16px 'Roboto';
 }
 .autocomplete {
   /*the container must be positioned relative:*/
@@ -393,7 +402,8 @@ input[type=submit] {
   padding: 10px;
   cursor: pointer;
   background-color: #fff;
-  border-bottom: 1px solid #d4d4d4;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 14px;
 }
 .autocomplete-items div:hover {
   /*when hovering an item:*/
@@ -407,7 +417,7 @@ input[type=submit] {
 
 * { box-sizing: border-box; }
 body {
-  font: 16px Arial;
+  font: 16px 'Roboto';
 }
 .autocomplete2 {
   /*the container must be positioned relative:*/
@@ -472,7 +482,8 @@ input[type=submit] {
   padding: 10px;
   cursor: pointer;
   background-color: #fff;
-  border-bottom: 1px solid #d4d4d4;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 14px;
 }
 .autocomplete2-items div:hover {
   /*when hovering an item:*/
