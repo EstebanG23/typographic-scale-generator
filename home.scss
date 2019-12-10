@@ -330,6 +330,8 @@
 }
 
 .platform-instruction {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   color: rgba(0, 0, 0, .80);
   font-size: 14px;
 }
@@ -403,7 +405,7 @@ input[type=submit] {
   cursor: pointer;
   background-color: #fff;
   color: rgba(0, 0, 0, 0.87);
-  font-size: 14px;
+  font-size: 16px;
 }
 .autocomplete-items div:hover {
   /*when hovering an item:*/
@@ -483,7 +485,7 @@ input[type=submit] {
   cursor: pointer;
   background-color: #fff;
   color: rgba(0, 0, 0, 0.87);
-  font-size: 14px;
+  font-size: 16px;
 }
 .autocomplete2-items div:hover {
   /*when hovering an item:*/

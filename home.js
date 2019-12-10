@@ -45,7 +45,9 @@ const urlName = (fontName) => {
   return fontName.replace(/ /g, '+')
 }
 
+
 const getCode = (type = 'web') => {
+  type = platformSelect.value;
 if (type === 'web') {
   return `
 $mdc-typography-styles-headline1: (
@@ -230,12 +232,13 @@ TextTheme(
 }
 
 const getInstruction = (type = 'web') => {
+  type = platformSelect.value;
   if (type === 'web') {
-    return `See <a href="https://fonts.google.com/specimen/${urlName(typography.h1.typeface)}?selection.family=${urlName(typography.h1.typeface)}">${typography.h1.typeface} on Google fonts</a> for further installation instruction.`
+    return `See <a href="https://fonts.google.com/specimen/${urlName(typography.h1.typeface)}?selection.family=${urlName(typography.h1.typeface)}">${typography.h1.typeface}</a> and <a href="https://fonts.google.com/specimen/${urlName(typography.body1.typeface)}?selection.family=${urlName(typography.body1.typeface)}">${typography.body1.typeface}</a> on Google fonts for further installation instructions.`
   } else if (type === 'android') {
-    return `Please add the font via Android Studio using <a href="https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts#via-android-studio">Downloadable Fonts</a>.`
+    return `Add fonts via Android Studio using <a href="https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts#via-android-studio">Downloadable Fonts</a>.`
   } else if (type === 'flutter') {
-    return `See <a href="https://flutter.dev/docs/cookbook/design/fonts">flutter.dev</a> for instructions on how to add this font to your project.
+    return `See <a href="https://flutter.dev/docs/cookbook/design/fonts">flutter.dev</a> for instructions on how to add these fonts to your project.
     `
   }
 }
