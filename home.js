@@ -40,6 +40,13 @@ const snakeCase = (fontName) => {
   return fontName.replace(/[^\w\s]/g, "").replace(/\s+/g, " ").toLowerCase().split(' ').join('_')
 }
 
+// Lower camel case conversion for Flutter method naming.
+function lowerCamelCase(str) {
+  return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+    return index == 0 ? word.toLowerCase() : word.toUpperCase();
+  }).replace(/\s+/g, '');
+}
+
 // URL from name for Google Fonts link
 const urlName = (fontName) => {
   return fontName.replace(/ /g, '+')
@@ -175,56 +182,43 @@ $mdc-typography-styles-caption: (
 else if (type === 'flutter') {
   return `
 TextTheme(
-  display4: TextStyle(
-    fontFamily: ${typography.h1.typeface},
+  display4: GoogleFonts.${lowerCamelCase(typography.h1.typeface)}TextStyle(
     fontSize: ${typography.h1.size},
   ),
-  display3: TextStyle(
-    fontFamily: ${typography.h2.typeface},
+  display3: GoogleFonts.${lowerCamelCase(typography.h2.typeface)}TextStyle(
     fontSize: ${typography.h2.size},
   ),
-  display2: TextStyle(
-    fontFamily: ${typography.h3.typeface},
+  display2: GoogleFonts.${lowerCamelCase(typography.h3.typeface)}TextStyle(
     fontSize: ${typography.h3.size},
   ),
-  display1: TextStyle(
-    fontFamily: ${typography.h4.typeface},
+  display1: GoogleFonts.${lowerCamelCase(typography.h4.typeface)}TextStyle(
     fontSize: ${typography.h4.size},
   ),
-  headline: TextStyle(
-    fontFamily: ${typography.h5.typeface},
+  headline: GoogleFonts.${lowerCamelCase(typography.h5.typeface)}TextStyle(
     fontSize: ${typography.h5.size},
   ),
-  title: TextStyle(
-    fontFamily: ${typography.h6.typeface},
+  title: GoogleFonts.${lowerCamelCase(typography.h6.typeface)}TextStyle(
     fontSize: ${typography.h6.size},
   ),
-  subhead: TextStyle(
-    fontFamily: ${typography.subtitle1.typeface},
+  subhead: GoogleFonts.${lowerCamelCase(typography.subtitle1.typeface)}TextStyle(
     fontSize: ${typography.subtitle1.size},
   ),
-  body2: TextStyle(
-    fontFamily: ${typography.body1.typeface},
+  body2: GoogleFonts.${lowerCamelCase(typography.body1.typeface)}TextStyle(
     fontSize: ${typography.body1.size},
   ),
-  body1: TextStyle(
-    fontFamily: ${typography.body2.typeface},
+  body1: GoogleFonts.${lowerCamelCase(typography.body2.typeface)}TextStyle(
     fontSize: ${typography.body2.size},
   ),
-  caption: TextStyle(
-    fontFamily: ${typography.caption.typeface},
+  caption: GoogleFonts.${lowerCamelCase(typography.caption.typeface)}TextStyle(
     fontSize: ${typography.caption.size},
   ),
-  button: TextStyle(
-    fontFamily: ${typography.button.typeface},
+  button: GoogleFonts.${lowerCamelCase(typography.button.typeface)}TextStyle(
     fontSize: ${typography.button.size},
   ),
-  subtitle: TextStyle(
-    fontFamily: ${typography.subtitle2.typeface},
+  subtitle: GoogleFonts.${lowerCamelCase(typography.subtitle2.typeface)}TextStyle(
     fontSize: ${typography.subtitle2.size},
   ),
-  overline: TextStyle(
-    fontFamily: ${typography.overline.typeface},
+  overline: GoogleFonts.${lowerCamelCase(typography.overline.typeface)}TextStyle(
     fontSize: ${typography.overline.size},
   ),
 )`
