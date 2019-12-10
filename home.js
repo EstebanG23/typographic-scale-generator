@@ -182,43 +182,43 @@ $mdc-typography-styles-caption: (
 else if (type === 'flutter') {
   return `
 TextTheme(
-  display4: GoogleFonts.${lowerCamelCase(typography.h1.typeface)}TextStyle(
+  display4: GoogleFonts.${lowerCamelCase(typography.h1.typeface)}(
     fontSize: ${typography.h1.size},
   ),
-  display3: GoogleFonts.${lowerCamelCase(typography.h2.typeface)}TextStyle(
+  display3: GoogleFonts.${lowerCamelCase(typography.h2.typeface)}(
     fontSize: ${typography.h2.size},
   ),
-  display2: GoogleFonts.${lowerCamelCase(typography.h3.typeface)}TextStyle(
+  display2: GoogleFonts.${lowerCamelCase(typography.h3.typeface)}(
     fontSize: ${typography.h3.size},
   ),
-  display1: GoogleFonts.${lowerCamelCase(typography.h4.typeface)}TextStyle(
+  display1: GoogleFonts.${lowerCamelCase(typography.h4.typeface)}(
     fontSize: ${typography.h4.size},
   ),
-  headline: GoogleFonts.${lowerCamelCase(typography.h5.typeface)}TextStyle(
+  headline: GoogleFonts.${lowerCamelCase(typography.h5.typeface)}(
     fontSize: ${typography.h5.size},
   ),
-  title: GoogleFonts.${lowerCamelCase(typography.h6.typeface)}TextStyle(
+  title: GoogleFonts.${lowerCamelCase(typography.h6.typeface)}(
     fontSize: ${typography.h6.size},
   ),
-  subhead: GoogleFonts.${lowerCamelCase(typography.subtitle1.typeface)}TextStyle(
+  subhead: GoogleFonts.${lowerCamelCase(typography.subtitle1.typeface)}(
     fontSize: ${typography.subtitle1.size},
   ),
-  body2: GoogleFonts.${lowerCamelCase(typography.body1.typeface)}TextStyle(
+  body2: GoogleFonts.${lowerCamelCase(typography.body1.typeface)}(
     fontSize: ${typography.body1.size},
   ),
-  body1: GoogleFonts.${lowerCamelCase(typography.body2.typeface)}TextStyle(
+  body1: GoogleFonts.${lowerCamelCase(typography.body2.typeface)}(
     fontSize: ${typography.body2.size},
   ),
-  caption: GoogleFonts.${lowerCamelCase(typography.caption.typeface)}TextStyle(
+  caption: GoogleFonts.${lowerCamelCase(typography.caption.typeface)}(
     fontSize: ${typography.caption.size},
   ),
-  button: GoogleFonts.${lowerCamelCase(typography.button.typeface)}TextStyle(
+  button: GoogleFonts.${lowerCamelCase(typography.button.typeface)}(
     fontSize: ${typography.button.size},
   ),
-  subtitle: GoogleFonts.${lowerCamelCase(typography.subtitle2.typeface)}TextStyle(
+  subtitle: GoogleFonts.${lowerCamelCase(typography.subtitle2.typeface)}(
     fontSize: ${typography.subtitle2.size},
   ),
-  overline: GoogleFonts.${lowerCamelCase(typography.overline.typeface)}TextStyle(
+  overline: GoogleFonts.${lowerCamelCase(typography.overline.typeface)}(
     fontSize: ${typography.overline.size},
   ),
 )`
