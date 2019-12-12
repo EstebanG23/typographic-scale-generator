@@ -33,13 +33,13 @@
 .type-scale-meta {
   display: flex;
   justify-content: space-between;
-  transform: translateX(-60px);
-  font-size: 12px;
-  margin: -38px 0 16px 120px;
   transform: translateY(-20px);
+  font-size: 12px;
   z-index: -1;
   opacity: 0;
   transition-duration: 0.25s;
+  height: 0;
+  align-items: center;
 
   .label {
     color: rgba(0, 0, 0, 0.6);
@@ -61,6 +61,10 @@
   border-color: black;
 }
 
+.font-radio:checked .type-scale-variable {
+  display: flex;
+}
+
 .expansion {
   display: none;
 }
@@ -72,6 +76,7 @@
 .expansion-radio:checked + .type-scale-meta {
   opacity: 1;
   transform: translateY(0);
+  height: 42px;
 }
 .expansion-radio:checked + .type-scale-item {
   border-bottom: solid 1px lightgrey;
@@ -321,6 +326,7 @@
 
 .tab-content {
   width: 560px;
+  padding-bottom: 1rem;
 }
 
 #code-content {
