@@ -203,20 +203,20 @@ TextTheme(
   subhead: GoogleFonts.${lowerCamelCase(typography.subtitle1.typeface)}(
     fontSize: ${typography.subtitle1.size},
   ),
-  body2: GoogleFonts.${lowerCamelCase(typography.body1.typeface)}(
+  subtitle: GoogleFonts.${lowerCamelCase(typography.subtitle2.typeface)}(
+    fontSize: ${typography.subtitle2.size},
+  ),
+  body1: GoogleFonts.${lowerCamelCase(typography.body1.typeface)}(
     fontSize: ${typography.body1.size},
   ),
-  body1: GoogleFonts.${lowerCamelCase(typography.body2.typeface)}(
+  body2: GoogleFonts.${lowerCamelCase(typography.body2.typeface)}(
     fontSize: ${typography.body2.size},
-  ),
-  caption: GoogleFonts.${lowerCamelCase(typography.caption.typeface)}(
-    fontSize: ${typography.caption.size},
   ),
   button: GoogleFonts.${lowerCamelCase(typography.button.typeface)}(
     fontSize: ${typography.button.size},
   ),
-  subtitle: GoogleFonts.${lowerCamelCase(typography.subtitle2.typeface)}(
-    fontSize: ${typography.subtitle2.size},
+  caption: GoogleFonts.${lowerCamelCase(typography.caption.typeface)}(
+    fontSize: ${typography.caption.size},
   ),
   overline: GoogleFonts.${lowerCamelCase(typography.overline.typeface)}(
     fontSize: ${typography.overline.size},
