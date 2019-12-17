@@ -228,7 +228,7 @@ TextTheme(
 const getInstruction = (type = 'web') => {
   type = platformSelect.value;
   if (type === 'web') {
-    return `See <a href="https://fonts.google.com/specimen/${urlName(typography.h1.typeface)}?selection.family=${urlName(typography.h1.typeface)}">${typography.h1.typeface}</a> and <a href="https://fonts.google.com/specimen/${urlName(typography.body1.typeface)}?selection.family=${urlName(typography.body1.typeface)}">${typography.body1.typeface}</a> on Google fonts for further installation instructions.`
+    return `See <a href="https://fonts.google.com/specimen/${urlName(typography.h1.typeface)}?selection.family=${urlName(typography.h1.typeface)}">${typography.h1.typeface}</a> and <a href="https://fonts.google.com/specimen/${urlName(typography.body1.typeface)}?selection.family=${urlName(typography.body1.typeface)}">${typography.body1.typeface}</a> on Google Fonts for further installation instructions.`
   } else if (type === 'android') {
     return `Add fonts via Android Studio using <a href="https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts#via-android-studio">Downloadable Fonts</a>.`
   } else if (type === 'flutter') {
@@ -315,7 +315,7 @@ function autocomplete(inp, arr) {
               /*insert the value for the autocomplete text field:*/
               inp.value = this.getElementsByTagName("input")[0].value;
               let fontValue = this.getElementsByTagName("input")[0].dataset.value;
-              
+
               WebFont.load({
                 google: {
                   families: [fontValue]
