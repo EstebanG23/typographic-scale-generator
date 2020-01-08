@@ -5,7 +5,7 @@ import { MDCRipple } from '@material/ripple';
 import { MDCTextField } from '@material/textfield';
 import { typography, typographyConst } from './type-vars';
 import { platform } from 'os';
-import { fonts } from "./google-fonts";
+import { API_KEY } from './keys'
 
 // const primaryTypeSelect = new MDCSelect(document.querySelector('.primary-type-select'));
 const platformSelect = new MDCSelect(document.querySelector('.platform-select'));
@@ -14,7 +14,6 @@ const platformSelect = new MDCSelect(document.querySelector('.platform-select'))
 const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
 
 // Switch content on tab activation
-
 Array.from(document.querySelectorAll('.mdc-tab')).forEach(
   tab => tab.addEventListener('MDCTab:interacted', (e) => switchToTab(e.detail.tabId))
 );
@@ -25,6 +24,19 @@ const switchToTab = (activatedTabId) => {
   });
 }
 
+// Get dynamic fonts
+function readJSON(file, callback) {
+  var rawFile = new XMLHttpRequest();
+  rawFile.overrideMimeType("application/json");
+  rawFile.open("GET", file, true);
+  rawFile.onreadystatechange = function() {
+      if (rawFile.readyState === 4 && rawFile.status == "200") {
+          callback(rawFile.responseText);
+      }
+  }
+  rawFile.send(null);
+}
+
 // Code Display Selection
 platformSelect.listen('MDCSelect:change', () => {
   const platform = platformSelect.value
@@ -32,8 +44,14 @@ platformSelect.listen('MDCSelect:change', () => {
   document.querySelector('.code-block').innerHTML = getCode(platform)
 });
 
-autocomplete(document.getElementById("myInput"), fonts);
-autocomplete2(document.getElementById("myInput2"), fonts);
+// Get dynamic Google Fonts
+readJSON(`https://www.googleapis.com/webfonts/v1/webfonts?key=${API_KEY}`, function(text){
+  const fonts = JSON.parse(text).items;
+  autocomplete(document.getElementById("myInput"), fonts);
+  autocomplete2(document.getElementById("myInput2"), fonts);
+  console.log(fonts);
+});
+
 
 // Snake case conversion for Android Studio
 const snakeCase = (fontName) => {
@@ -51,7 +69,6 @@ function lowerCamelCase(str) {
 const urlName = (fontName) => {
   return fontName.replace(/ /g, '+')
 }
-
 
 const getCode = (type = 'web') => {
   type = platformSelect.value;
@@ -307,9 +324,9 @@ function autocomplete(inp, arr) {
         /*check if the item starts with the same letters as the text field value:*/
           /*create a DIV element for each matching element:*/
           b = document.createElement("DIV");
-          b.innerHTML += arr[i].text;
+          b.innerHTML += arr[i].family;
           /*insert a input field that will hold the current array item's value:*/
-          b.innerHTML += "<input type='hidden' data-value='" + arr[i].value + "' value='" + arr[i].text + "'>";
+          b.innerHTML += "<input type='hidden' data-value='" + urlName(arr[i].family) + "' value='" + arr[i].family + "'>";
           /*execute a function when someone clicks on the item value (DIV element):*/
               b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
@@ -361,14 +378,14 @@ function autocomplete(inp, arr) {
       /*for each item in the array...*/
       for (i = 0; i < arr.length; i++) {
         /*check if the item starts with the same letters as the text field value:*/
-        if (arr[i].text.substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+        if (arr[i].family.substr(0, val.length).toUpperCase() == val.toUpperCase()) {
           /*create a DIV element for each matching element:*/
           b = document.createElement("DIV");
           /*make the matching letters bold:*/
-          b.innerHTML = "<strong>" + arr[i].text.substr(0, val.length) + "</strong>";
-          b.innerHTML += arr[i].text.substr(val.length);
+          b.innerHTML = "<strong>" + arr[i].family.substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].family.substr(val.length);
           /*insert a input field that will hold the current array item's value:*/
-          b.innerHTML += "<input type='hidden' data-value='" + arr[i].value + "' value='" + arr[i].text + "'>";
+          b.innerHTML += "<input type='hidden' data-value='" + arr[i].value + "' value='" + arr[i].family + "'>";
           /*execute a function when someone clicks on the item value (DIV element):*/
               b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
@@ -488,9 +505,9 @@ function autocomplete2(inp, arr) {
         /*check if the item starts with the same letters as the text field value:*/
           /*create a DIV element for each matching element:*/
           b = document.createElement("DIV");
-          b.innerHTML += arr[i].text;
+          b.innerHTML += arr[i].family;
           /*insert a input field that will hold the current array item's value:*/
-          b.innerHTML += "<input type='hidden' data-value='" + arr[i].value + "' value='" + arr[i].text + "'>";
+          b.innerHTML += "<input type='hidden' data-value='" + urlName(arr[i].family) + "' value='" + arr[i].family + "'>";
           /*execute a function when someone clicks on the item value (DIV element):*/
               b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
@@ -541,14 +558,14 @@ function autocomplete2(inp, arr) {
       /*for each item in the array...*/
       for (i = 0; i < arr.length; i++) {
         /*check if the item starts with the same letters as the text field value:*/
-        if (arr[i].text.substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+        if (arr[i].family.substr(0, val.length).toUpperCase() == val.toUpperCase()) {
           /*create a DIV element for each matching element:*/
           b = document.createElement("DIV");
           /*make the matching letters bold:*/
-          b.innerHTML = "<strong>" + arr[i].text.substr(0, val.length) + "</strong>";
-          b.innerHTML += arr[i].text.substr(val.length);
+          b.innerHTML = "<strong>" + arr[i].family.substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].family.substr(val.length);
           /*insert a input field that will hold the current array item's value:*/
-          b.innerHTML += "<input type='hidden' data-value='" + arr[i].value + "' value='" + arr[i].text + "'>";
+          b.innerHTML += "<input type='hidden' data-value='" + arr[i].value + "' value='" + arr[i].family + "'>";
           /*execute a function when someone clicks on the item value (DIV element):*/
               b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
