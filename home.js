@@ -49,7 +49,6 @@ readJSON(`https://www.googleapis.com/webfonts/v1/webfonts?key=${API_KEY}`, funct
   const fonts = JSON.parse(text).items;
   autocomplete(document.getElementById("myInput"), fonts);
   autocomplete2(document.getElementById("myInput2"), fonts);
-  console.log(fonts);
 });
 
 
