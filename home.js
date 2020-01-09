@@ -75,55 +75,55 @@ if (type === 'web') {
   return `
 $mdc-typography-styles-headline1: (
   font-family: unquote("${typography.h1.typeface}"),
-  font-size: ${typography.h1.size};
+  font-size: ${typography.h1.size}
 );
 $mdc-typography-styles-headline2: (
   font-family: unquote("${typography.h2.typeface}"),
-  font-size: ${typography.h2.size};
+  font-size: ${typography.h2.size}
 );
 $mdc-typography-styles-headline3: (
   font-family: unquote("${typography.h3.typeface}"),
-  font-size: ${typography.h3.size};
+  font-size: ${typography.h3.size}
 );
 $mdc-typography-styles-headline4: (
   font-family: unquote("${typography.h4.typeface}"),
-  font-size: ${typography.h4.size};
+  font-size: ${typography.h4.size}
 );
 $mdc-typography-styles-headline5: (
   font-family: unquote("${typography.h5.typeface}"),
-  font-size: ${typography.h5.size};
+  font-size: ${typography.h5.size}
 );
 $mdc-typography-styles-headline6: (
   font-family: unquote("${typography.h6.typeface}"),
-  font-size: ${typography.h6.size};
+  font-size: ${typography.h6.size}
 );
 $mdc-typography-styles-body1: (
   font-family: unquote("${typography.body1.typeface}"),
-  font-size: ${typography.body1.size};
+  font-size: ${typography.body1.size}
 );
 $mdc-typography-styles-body2: (
   font-family: unquote("${typography.body2.typeface}"),
-  font-size: ${typography.body2.size};
+  font-size: ${typography.body2.size}
 );
 $mdc-typography-styles-subtitle1: (
   font-family: unquote("${typography.subtitle1.typeface}"),
-  font-size: ${typography.subtitle1.size};
+  font-size: ${typography.subtitle1.size}
 );
 $mdc-typography-styles-subtitle2: (
   font-family: unquote("${typography.subtitle2.typeface}"),
-  font-size: ${typography.subtitle2.size};
+  font-size: ${typography.subtitle2.size}
 );
 $mdc-typography-styles-button: (
   font-family: unquote("${typography.button.typeface}"),
-  font-size: ${typography.button.size};
+  font-size: ${typography.button.size}
 );
 $mdc-typography-styles-overline: (
   font-family: unquote("${typography.overline.typeface}"),
-  font-size: ${typography.overline.size};
+  font-size: ${typography.overline.size}
 );
 $mdc-typography-styles-caption: (
   font-family: unquote("${typography.caption.typeface}"),
-  font-size: ${typography.caption.size};
+  font-size: ${typography.caption.size}
 );`
 } else if (type === 'android') {
   return `
