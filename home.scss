@@ -15,6 +15,7 @@
 @import "@material/select/mdc-select";
 @import "@material/button/mdc-button";
 @import "@material/textfield/mdc-text-field";
+@import "@material/icon-button/mdc-icon-button";
 
 .demo-width-class {
   width: 170px;
@@ -501,4 +502,20 @@ input[type=submit] {
   /*when navigating through the items using the arrow keys:*/
   background-color: DodgerBlue !important;
   color: #ffffff;
+}
+
+.codeTabActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.successMsg {
+  position: absolute;
+  margin: 0;
+  display: none;
+}
+
+.successMsg.active {
+  display: block;
 }

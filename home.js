@@ -666,3 +666,37 @@ document.addEventListener("click", function (e) {
     closeAllLists(e.target);
 });
 }
+
+// Copy to clipboard
+document.querySelector('.copyBtn').addEventListener('click', (e) => {
+  e.preventDefault()
+  const text = document.querySelector('.code-block').innerHTML
+  const successMsg = document.querySelector('.successMsg')
+
+  // Add the text to the DOM with a hidden input field
+  const input = document.createElement('input')
+  document.body.appendChild(input)
+  input.value = text
+  input.style.position="fixed";  //avoid scrolling to bottom
+  input.style.opacity="0" // hide textarea
+
+  // Select the text
+  input.focus()
+  input.select()
+
+  // Copy text to clipboard
+  const isSuccessful = document.execCommand('copy')
+
+  // Show success and catch errors
+  if (isSuccessful) {
+    // Show successMsg
+    successMsg.classList.add('active')
+    
+    // Hide successMsg after 2 seconds
+    setTimeout(function () {
+      successMsg.classList.remove('active')
+    }, 2000);
+  } else {
+    console.error('Failed to copy text.')
+  }
+})
