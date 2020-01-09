@@ -532,6 +532,10 @@ function autocomplete2(inp, arr) {
                   document.querySelector('.code-block').innerHTML = getCode();
                 }
               });
+
+              // Scroll body into view when changing body & captions typeface
+              // this is a tester for this interaction
+              document.querySelector('#body1').scrollIntoView()
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();
