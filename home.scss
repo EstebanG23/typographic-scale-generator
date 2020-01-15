@@ -398,7 +398,7 @@ input[type=submit] {
   max-height: 300px;
   overflow: scroll;
   position: absolute;
-  border: 1px solid #d4d4d4;
+  border-radius: 4px;
   // border-bottom: none;
   border-top: none;
   z-index: 99;
@@ -406,13 +406,22 @@ input[type=submit] {
   top: 100%;
   left: 0;
   right: 0;
+  margin-top: 1px;
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);;
+  :first-child {
+    margin-top: 8px;
+  }
+  :last-child {
+    margin-bottom: 8px;
+  }
 }
 .autocomplete-items div {
-  padding: 10px;
+  padding: 14px 16px;
   cursor: pointer;
   background-color: #fff;
   color: rgba(0, 0, 0, 0.87);
   font-size: 16px;
+  line-height: 20px;
 }
 .autocomplete-items div:hover {
   /*when hovering an item:*/
@@ -478,7 +487,7 @@ input[type=submit] {
   max-height: 300px;
   overflow: scroll;
   position: absolute;
-  border: 1px solid #d4d4d4;
+  border-radius: 4px;
   // border-bottom: none;
   border-top: none;
   z-index: 99;
@@ -486,13 +495,22 @@ input[type=submit] {
   top: 100%;
   left: 0;
   right: 0;
+  margin-top: 1px;
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);;
+  :first-child {
+    margin-top: 8px;
+  }
+  :last-child {
+    margin-bottom: 8px;
+  }
 }
 .autocomplete2-items div {
-  padding: 10px;
+  padding: 14px 16px;
   cursor: pointer;
   background-color: #fff;
   color: rgba(0, 0, 0, 0.87);
   font-size: 16px;
+  line-height: 20px;
 }
 .autocomplete2-items div:hover {
   /*when hovering an item:*/
