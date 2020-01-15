@@ -533,12 +533,13 @@ function autocomplete2(inp, arr) {
                 }
               });
 
-              // Scroll body into view when changing body & captions typeface
-              // this is a tester for this interaction
-              document.querySelector('#body1').scrollIntoView()
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();
+
+              // Scroll body into view when changing body & captions typeface
+              // this is a tester for this interaction
+              setTimeout(() => document.querySelector('#overline').scrollIntoView(), 500)
           });
           a.appendChild(b);
       }
