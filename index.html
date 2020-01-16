@@ -448,7 +448,13 @@
               </div>
               <div>
                 <button class="copyBtn mdc-icon-button material-icons">file_copy</button>
-                <p class="mdc-typography--body2 successMsg">Copied!</p>
+                <div class="mdc-snackbar mdc-snackbar--leading successMsg">
+                  <div class="mdc-snackbar__surface">
+                    <div class="mdc-snackbar__label" role="status"  daria-live="polite">
+                      Code copied to clipboard.
+                    </div>
+                  </div>
+                </div>
               </div>
           </div>
           <p class="platform-instruction"></p>

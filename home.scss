@@ -16,6 +16,7 @@
 @import "@material/button/mdc-button";
 @import "@material/textfield/mdc-text-field";
 @import "@material/icon-button/mdc-icon-button";
+@import "@material/snackbar/mdc-snackbar";
 
 .demo-width-class {
   width: 170px;
@@ -240,6 +241,8 @@
 
 .main-content {
   display: flex;
+  height: calc(100% - 48px);
+  position: relative;
   flex-direction: column;
   margin: 0 auto 0 0;
   margin-top: 48px;
@@ -526,16 +529,6 @@ input[type=submit] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.successMsg {
-  position: absolute;
-  margin: 0;
-  display: none;
-}
-
-.successMsg.active {
-  display: block;
 }
 
 .main-tabs {

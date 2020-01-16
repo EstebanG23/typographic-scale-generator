@@ -28,6 +28,7 @@
     "@material/list": "^1.0.1",
     "@material/ripple": "^1.0.1",
     "@material/select": "^3.2.0",
+    "@material/snackbar": "^3.2.0",
     "@material/tab-bar": "^3.2.0",
     "@material/textfield": "^1.0.1",
     "@material/typography": "^1.0.0",

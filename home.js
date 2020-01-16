@@ -678,8 +678,7 @@ document.querySelector('.copyBtn').addEventListener('click', (e) => {
   const input = document.createElement('input')
   document.body.appendChild(input)
   input.value = text
-  input.style.position="fixed";  //avoid scrolling to bottom
-  input.style.opacity="0" // hide textarea
+  input.style.display="none";  //avoid scrolling to bottom and showing input
 
   // Select the text
   input.focus()
@@ -691,11 +690,11 @@ document.querySelector('.copyBtn').addEventListener('click', (e) => {
   // Show success and catch errors
   if (isSuccessful) {
     // Show successMsg
-    successMsg.classList.add('active')
+    successMsg.classList.add('mdc-snackbar--open')
     
     // Hide successMsg after 2 seconds
     setTimeout(function () {
-      successMsg.classList.remove('active')
+      successMsg.classList.remove('mdc-snackbar--open')
     }, 2000);
   } else {
     console.error('Failed to copy text.')
