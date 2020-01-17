@@ -45,7 +45,7 @@ platformSelect.listen('MDCSelect:change', () => {
 });
 
 // Get dynamic Google Fonts
-readJSON(`https://www.googleapis.com/webfonts/v1/webfonts?key=${API_KEY}`, function(text){
+readJSON(`https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&key=${API_KEY}`, function(text){
   const fonts = JSON.parse(text).items;
   autocomplete(document.getElementById("myInput"), fonts);
   autocomplete2(document.getElementById("myInput2"), fonts);
@@ -301,6 +301,14 @@ function getAdjustmentFactor(font, size) {
     const fontXHeightFraction = font.xHeight / size;
     return ROBOTO_X_HEIGHT_FRACTION / fontXHeightFraction;
 }
+
+// clicking into font dropdown input selects it to 
+// signify you can type in the input
+document.querySelectorAll('.type-input').forEach((input) => {
+  input.addEventListener('click', (e) => {
+    e.target.select()
+  });
+});
 
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
