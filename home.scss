@@ -76,10 +76,14 @@
   display: none;
 }
 
-.expansion-radio:checked + .type-scale-meta {
+.expansion-radio:checked + .type-scale-item .type-scale-meta {
   opacity: 1;
   transform: translateY(0);
   height: 42px;
+}
+
+.expansion-radio:checked + .type-scale-item {
+  background: #fafafa;
 }
 
 .mdc-tab-bar {
