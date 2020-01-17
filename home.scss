@@ -42,6 +42,7 @@
   transition-duration: 0.25s;
   height: 0;
   align-items: center;
+  width: 350px;
 
   .label {
     color: rgba(0, 0, 0, 0.6);
@@ -79,9 +80,6 @@
   opacity: 1;
   transform: translateY(0);
   height: 42px;
-}
-.expansion-radio:checked + .type-scale-item {
-  border-bottom: solid 1px lightgrey;
 }
 
 .mdc-tab-bar {
@@ -246,11 +244,11 @@
   flex-direction: column;
   margin: 0 auto 0 0;
   margin-top: 48px;
+  overflow-x: hidden;
 
   .type-scale-item {
     display: flex;
     flex-direction: column;
-    //border-bottom: solid 1px lightgrey;
     min-height: 30px;
     padding: 20px 20px 0 20px;
     overflow: hidden;
@@ -278,8 +276,6 @@
       align-self: flex-start;
       white-space: nowrap;
       text-overflow: clip;
-      width: 150%;
-      overflow-x: scroll;
     }
   }
 }
@@ -411,13 +407,27 @@ input[type=submit] {
   right: 0;
   margin-top: 1px;
   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);;
+ 
   :first-child {
     margin-top: 8px;
   }
+
   :last-child {
     margin-bottom: 8px;
   }
+
+  &:before {
+    content: "Sorted by popularity";
+    font-size: 10px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 8px 0 -8px 16px;
+    display: block;
+    color: #909090;
+  }
 }
+
 .autocomplete-items div {
   padding: 14px 16px;
   cursor: pointer;
@@ -432,7 +442,7 @@ input[type=submit] {
 }
 .autocomplete-active {
   /*when navigating through the items using the arrow keys:*/
-  background-color: DodgerBlue !important;
+  background-color: #cfcfcf !important;
   color: #ffffff;
 }
 
