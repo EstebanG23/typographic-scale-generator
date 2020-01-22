@@ -21,6 +21,10 @@ Array.from(document.querySelectorAll('.mdc-tab')).forEach(
 const switchToTab = (activatedTabId) => {
   Array.from(document.querySelectorAll('.tab-content')).forEach(tabContent => {
     tabContent.style.display = tabContent.id.slice(0, -1 * '-content'.length) == activatedTabId.slice(0, -1 * '-tab'.length) ? 'block' : 'none';
+
+    if (document.querySelector('#typescale-tab').classList.contains('mdc-tab--active')) {
+    }
+    document.querySelector('.main-content').scrollTo(0, 0)
   });
 }
 
