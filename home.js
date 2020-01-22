@@ -551,7 +551,7 @@ function autocomplete2(inp, arr) {
 
               // Scroll body into view when changing body & captions typeface
               // this is a tester for this interaction
-              setTimeout(() => document.querySelector('#overline').scrollIntoView(), 500)
+              setTimeout(() => document.querySelector('#overline').scrollIntoView({ behavior: 'smooth' }), 500)
           });
           a.appendChild(b);
       }

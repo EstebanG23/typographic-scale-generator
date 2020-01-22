@@ -321,8 +321,7 @@
 
 .code-sample {
   font-family: 'Roboto Mono';
-//  background: whitesmoke;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 1rem 1rem 0;
   font-size: 14px;
   line-height: 1.4;
   overflow: scroll;
@@ -335,7 +334,7 @@
 
 #code-content {
   display: none;
-  padding: 20px;
+  padding: 24px;
   box-sizing: border-box;
 }
 
@@ -397,7 +396,8 @@ input[type=submit] {
   background-color: DodgerBlue;
   color: #fff;
 }
-.autocomplete-items {
+.autocomplete-items,
+.autocomplete2-items {
   max-height: 300px;
   overflow: scroll;
   position: absolute;
