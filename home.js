@@ -690,7 +690,8 @@ document.querySelector('.copyBtn').addEventListener('click', (e) => {
   const input = document.createElement('input')
   document.body.appendChild(input)
   input.value = text
-  input.style.display="none";  //avoid scrolling to bottom and showing input
+  input.style.display="fixed"  // avoid scrolling to bottom and showing input
+  input.style.opacity="0"  // visually hide
 
   // Select the text
   input.focus()
