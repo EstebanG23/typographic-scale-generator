@@ -171,11 +171,6 @@
     color: lightgray;
   }
 
-  /* Hover state for info icons 
-  .info-icon:hover {
-    background-color: rgba(0, 0, 0, 0.12);
-  }
-  */
 }
 
 .or {
@@ -351,13 +346,14 @@
 
 #code-content {
   display: none;
-  padding: 24px;
+  padding: 24px 0 24px 24px;
   box-sizing: border-box;
 }
 
 .platform-instruction {
   margin-top: 2rem;
   margin-bottom: 1rem;
+  padding-right: 24px;
   color: rgba(0, 0, 0, .80);
   font-size: 14px;
 }
@@ -565,4 +561,8 @@ input[type=submit] {
   top: 0;
   z-index: 10;
   width: 559px;
+}
+
+button.copyBtn {
+  left: -12px;
 }
