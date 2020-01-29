@@ -50,9 +50,12 @@ platformSelect.listen('MDCSelect:change', () => {
 
 // Get dynamic Google Fonts
 readJSON(`https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&key=${API_KEY}`, function(text){
-  const fonts = JSON.parse(text).items;
-  autocomplete(document.getElementById("myInput"), fonts);
-  autocomplete2(document.getElementById("myInput2"), fonts);
+  const allFonts = JSON.parse(text).items;
+  autocomplete(document.getElementById("myInput"), allFonts);
+
+  const bodyFonts = allFonts.filter(font => font.category === 'serif' || font.category === 'sans-serif' || font.category === 'monospace')
+  
+  autocomplete2(document.getElementById("myInput2"), bodyFonts);
 });
 
 
