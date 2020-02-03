@@ -318,23 +318,29 @@ document.querySelectorAll('.type-input').forEach((input) => {
 });
 
 function autocomplete(inp, arr) {
-  /*the autocomplete function takes two arguments,
-  the text field element and an array of possible autocompleted values:*/
-  var currentFocus;
-  /*execute a function when someone writes in the text field:*/
-  inp.parentNode.addEventListener("click", function(){
+  // A11y to open dropdown
+  document.addEventListener('keydown', (e) => {
+    if (inp === document.activeElement) {
+      if (e.key === 'Enter') {
+        openDropdown()
+      }
+    }
+  })
+
+  function openDropdown() {
+    const parent = inp.parentElement
     document.querySelector('.autocomplete-input').focus();
     document.querySelector('.autocomplete-dropdown').classList.add('flipped');
-    var a, b, i, val = this.children[0].value;
+    var a, b, i = parent.children[0].value;
       /*close any already open lists of autocompleted values*/
       closeAllLists();
       currentFocus = -1;
       /*create a DIV element that will contain the items (values):*/
       a = document.createElement("DIV");
-      a.setAttribute("id", this.children[0].id + "autocomplete-list");
+      a.setAttribute("id", parent.children[0].id + "autocomplete-list");
       a.setAttribute("class", "autocomplete-items");
       /*append the DIV element as a child of the autocomplete container:*/
-      this.children[0].parentNode.appendChild(a);
+      parent.children[0].parentNode.appendChild(a);
       /*for each item in the array...*/
       for (i = 0; i < arr.length; i++) {
         /*check if the item starts with the same letters as the text field value:*/
@@ -373,11 +379,17 @@ function autocomplete(inp, arr) {
           });
           a.appendChild(b);
       }
-    // this.value = ' ';
-    // this.dispatchEvent(event);
+  }
+  
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.parentNode.addEventListener("click", function(){
+    openDropdown()
   });
   inp.addEventListener("blur", function(){
-    // closeAllLists();
+    closeAllLists();
   });
   inp.addEventListener("input", function(e) {
       var a, b, i, val = this.value;
@@ -499,23 +511,29 @@ document.addEventListener("click", function (e) {
 }
 
 function autocomplete2(inp, arr) {
-  /*the autocomplete function takes two arguments,
-  the text field element and an array of possible autocompleted values:*/
-  var currentFocus;
-  /*execute a function when someone writes in the text field:*/
-  inp.parentNode.addEventListener("click", function(){
+  // A11y to open dropdown
+  document.addEventListener('keydown', (e) => {
+    if (inp === document.activeElement) {
+      if (e.key === 'Enter') {
+        openDropdown()
+      }
+    }
+  })
+
+  function openDropdown() {
+    const parent = inp.parentElement
     document.querySelector('.autocomplete2-input').focus();
     document.querySelector('.autocomplete2-dropdown').classList.add('flipped');
-    var a, b, i, val = this.children[0].value;
+    var a, b, i, val = parent.children[0].value;
       /*close any already open lists of autocompleted values*/
       closeAllLists();
       currentFocus = -1;
       /*create a DIV element that will contain the items (values):*/
       a = document.createElement("DIV");
-      a.setAttribute("id", this.children[0].id + "autocomplete2-list");
+      a.setAttribute("id", parent.children[0].id + "autocomplete2-list");
       a.setAttribute("class", "autocomplete2-items");
       /*append the DIV element as a child of the autocomplete container:*/
-      this.children[0].parentNode.appendChild(a);
+      parent.children[0].parentNode.appendChild(a);
       /*for each item in the array...*/
       for (i = 0; i < arr.length; i++) {
         /*check if the item starts with the same letters as the text field value:*/
@@ -558,11 +576,17 @@ function autocomplete2(inp, arr) {
           });
           a.appendChild(b);
       }
-    // this.value = ' ';
-    // this.dispatchEvent(event);
+  }
+
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.parentNode.addEventListener("click", function(){
+    openDropdown()
   });
   inp.addEventListener("blur", function(){
-    // closeAllLists();
+    closeAllLists();
   });
   inp.addEventListener("input", function(e) {
       var a, b, i, val = this.value;
@@ -716,3 +740,17 @@ document.querySelector('.copyBtn').addEventListener('click', (e) => {
     console.error('Failed to copy text.')
   }
 })
+
+// // A11y for those dropdowns
+// const dropdownOpen = () => {
+//   if (document.querySelector('.autocomplete-input') === document.activeElement) {
+//     console.log('selected')
+//     document.addEventListener('keypress', function (e) {
+//       if (e.key === 'Enter') {
+//         console.log('open')
+//       }
+//     });
+//   }
+// }
+
+// dropdownOpen()
