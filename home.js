@@ -447,6 +447,11 @@ function autocomplete(inp, arr) {
   });
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function(e) {
+    const parent = document.querySelector('#myInputautocomplete-list')
+    // Focus movement
+    parent.children[currentFocus + 1].scrollIntoView(false)
+
+      // Focus position logic
       var x = document.getElementById(this.id + "autocomplete-list");
       if (x) x = x.getElementsByTagName("div");
       if (e.keyCode == 40) {
@@ -644,6 +649,10 @@ function autocomplete2(inp, arr) {
   });
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function(e) {
+    const parent = document.querySelector('#myInput2autocomplete2-list')
+    // Focus movement
+    parent.children[currentFocus + 1].scrollIntoView(false)
+
       var x = document.getElementById(this.id + "autocomplete2-list");
       if (x) x = x.getElementsByTagName("div");
       if (e.keyCode == 40) {
