@@ -322,6 +322,7 @@ function autocomplete(inp, arr) {
   document.addEventListener('keydown', (e) => {
     if (inp === document.activeElement) {
       if (e.key === 'Enter') {
+        e.preventDefault()
         openDropdown()
       }
     }
@@ -447,10 +448,12 @@ function autocomplete(inp, arr) {
   });
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function(e) {
-    const parent = document.querySelector('#myInputautocomplete-list')
-    // Focus movement
-    parent.children[currentFocus + 1].scrollIntoView(false)
-
+    if (e.keyCode === 40 || e.keyCode === 38) {
+      const parent = document.querySelector('#myInputautocomplete-list')
+      // Focus movement
+      parent.children[currentFocus + 1].scrollIntoView(false)
+    }
+    
       // Focus position logic
       var x = document.getElementById(this.id + "autocomplete-list");
       if (x) x = x.getElementsByTagName("div");
@@ -520,6 +523,7 @@ function autocomplete2(inp, arr) {
   document.addEventListener('keydown', (e) => {
     if (inp === document.activeElement) {
       if (e.key === 'Enter') {
+        e.preventDefault()
         openDropdown()
       }
     }
@@ -649,9 +653,11 @@ function autocomplete2(inp, arr) {
   });
   /*execute a function presses a key on the keyboard:*/
   inp.addEventListener("keydown", function(e) {
-    const parent = document.querySelector('#myInput2autocomplete2-list')
-    // Focus movement
-    parent.children[currentFocus + 1].scrollIntoView(false)
+    if (e.keyCode === 40 || e.keyCode === 38) {
+      const parent = document.querySelector('#myInput2autocomplete2-list')
+      // Focus movement
+      parent.children[currentFocus + 1].scrollIntoView(false)
+    }
 
       var x = document.getElementById(this.id + "autocomplete2-list");
       if (x) x = x.getElementsByTagName("div");
