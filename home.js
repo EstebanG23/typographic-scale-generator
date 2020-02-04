@@ -389,7 +389,7 @@ function autocomplete(inp, arr) {
     openDropdown()
   });
   inp.addEventListener("blur", function(){
-    closeAllLists();
+    // closeAllLists();
   });
   inp.addEventListener("input", function(e) {
       var a, b, i, val = this.value;
@@ -586,7 +586,7 @@ function autocomplete2(inp, arr) {
     openDropdown()
   });
   inp.addEventListener("blur", function(){
-    closeAllLists();
+    // closeAllLists();
   });
   inp.addEventListener("input", function(e) {
       var a, b, i, val = this.value;
