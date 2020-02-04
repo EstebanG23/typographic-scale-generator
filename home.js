@@ -354,7 +354,7 @@ function autocomplete(inp, arr) {
               b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
               inp.value = this.getElementsByTagName("input")[0].value;
-              let fontValue = this.getElementsByTagName("input")[0].dataset.value;
+              let fontValue = inp.value
 
               WebFont.load({
                 google: {
@@ -419,7 +419,7 @@ function autocomplete(inp, arr) {
               b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
               inp.value = this.getElementsByTagName("input")[0].value;
-              let fontValue = this.getElementsByTagName("input")[0].dataset.value;
+              let fontValue = inp.value
               WebFont.load({
                 google: {
                   families: [fontValue]
@@ -555,7 +555,7 @@ function autocomplete2(inp, arr) {
               b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
               inp.value = this.getElementsByTagName("input")[0].value;
-              let fontValue = this.getElementsByTagName("input")[0].dataset.value;
+              let fontValue = inp.value
               WebFont.load({
                 google: {
                   families: [fontValue]
@@ -624,7 +624,7 @@ function autocomplete2(inp, arr) {
               b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
               inp.value = this.getElementsByTagName("input")[0].value;
-              let fontValue = this.getElementsByTagName("input")[0].dataset.value;
+              let fontValue = inp.value
               WebFont.load({
                 google: {
                   families: [fontValue]
@@ -646,6 +646,7 @@ function autocomplete2(inp, arr) {
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();
+              setTimeout(() => document.querySelector('#overline').scrollIntoView({ behavior: 'smooth' }), 250)
           });
           a.appendChild(b);
         }
