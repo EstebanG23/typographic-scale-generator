@@ -755,17 +755,3 @@ document.querySelector('.copyBtn').addEventListener('click', (e) => {
     console.error('Failed to copy text.')
   }
 })
-
-// // A11y for those dropdowns
-// const dropdownOpen = () => {
-//   if (document.querySelector('.autocomplete-input') === document.activeElement) {
-//     console.log('selected')
-//     document.addEventListener('keypress', function (e) {
-//       if (e.key === 'Enter') {
-//         console.log('open')
-//       }
-//     });
-//   }
-// }
-
-// dropdownOpen()
