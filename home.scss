@@ -120,6 +120,7 @@
   border-left-width: 1px;
   border-left-style: solid;
   border-right: none;
+  position: relative;
 
   .mdc-list {
     margin: 70px 5px auto 5px;
@@ -571,6 +572,8 @@ button.copyBtn {
   padding: 16px;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  bottom: 0;
 }
 
 .google-fonts-logo {
