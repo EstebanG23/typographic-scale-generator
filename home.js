@@ -475,7 +475,7 @@ function autocomplete(inp, arr) {
     if (e.keyCode === 40 || e.keyCode === 38) {
       const parent = document.querySelector('#myInputautocomplete-list')
       // Focus movement
-      parent.children[currentFocus + 1].scrollIntoView({ block: 'end', inline: 'start' })
+      parent.children[currentFocus + 1].scrollIntoView({ block: 'nearest', inline: 'start' })
     }
     
       // Focus position logic
@@ -681,7 +681,7 @@ function autocomplete2(inp, arr) {
     if (e.keyCode === 40 || e.keyCode === 38) {
       const parent = document.querySelector('#myInput2autocomplete2-list')
       // Focus movement
-      parent.children[currentFocus + 1].scrollIntoView({ block: 'end', inline: 'start' })
+      parent.children[currentFocus + 1].scrollIntoView({ block: 'nearest', inline: 'start' })
     }
 
       var x = document.getElementById(this.id + "autocomplete2-list");
