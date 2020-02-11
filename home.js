@@ -206,7 +206,6 @@ else if (type === 'flutter') {
   return `
 TextTheme(
   display4: GoogleFonts.${lowerCamelCase(typography.h1.typeface)}(
-    display4: GoogleFonts.roboto(
     fontSize: ${typography.h1.size},
     fontWeight: FontWeight.w300,
     letterSpacing: -1.5
