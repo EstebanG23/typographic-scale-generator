@@ -121,6 +121,8 @@
   border-left-style: solid;
   border-right: none;
   height: 100vh;
+  position: fixed;
+  right: 0;
 
   .mdc-list {
     margin: 70px 5px auto 5px;
