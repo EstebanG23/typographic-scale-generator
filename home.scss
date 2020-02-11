@@ -412,6 +412,7 @@ input[type=submit] {
 }
 .autocomplete-items,
 .autocomplete2-items {
+  background: white;
   max-height: 284px;
   overflow: scroll;
   position: absolute;
@@ -443,6 +444,12 @@ input[type=submit] {
     margin: 12px 0 -8px 16px;
     display: block;
     color: #909090;
+  }
+
+  // Empty state for matches
+  &:empty:before {
+    content: "No matches found";
+    height: 30px;
   }
 }
 
