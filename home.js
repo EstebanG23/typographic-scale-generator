@@ -206,43 +206,68 @@ else if (type === 'flutter') {
   return `
 TextTheme(
   display4: GoogleFonts.${lowerCamelCase(typography.h1.typeface)}(
+    display4: GoogleFonts.roboto(
     fontSize: ${typography.h1.size},
+    fontWeight: FontWeight.w300,
+    letterSpacing: -1.5
   ),
   display3: GoogleFonts.${lowerCamelCase(typography.h2.typeface)}(
     fontSize: ${typography.h2.size},
+    fontWeight: FontWeight.w300,
+    letterSpacing: -0.5
   ),
   display2: GoogleFonts.${lowerCamelCase(typography.h3.typeface)}(
     fontSize: ${typography.h3.size},
+    fontWeight: FontWeight.w400
   ),
   display1: GoogleFonts.${lowerCamelCase(typography.h4.typeface)}(
     fontSize: ${typography.h4.size},
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.25
   ),
   headline: GoogleFonts.${lowerCamelCase(typography.h5.typeface)}(
     fontSize: ${typography.h5.size},
+    fontWeight: FontWeight.w400
   ),
   title: GoogleFonts.${lowerCamelCase(typography.h6.typeface)}(
     fontSize: ${typography.h6.size},
+    fontWeight: FontWeight.w500,
+    letterSpacing: 0.15
   ),
   subhead: GoogleFonts.${lowerCamelCase(typography.subtitle1.typeface)}(
     fontSize: ${typography.subtitle1.size},
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.15
   ),
   subtitle: GoogleFonts.${lowerCamelCase(typography.subtitle2.typeface)}(
     fontSize: ${typography.subtitle2.size},
+    fontWeight: FontWeight.w500,
+    letterSpacing: 0.1
   ),
   body1: GoogleFonts.${lowerCamelCase(typography.body1.typeface)}(
     fontSize: ${typography.body1.size},
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.5
   ),
   body2: GoogleFonts.${lowerCamelCase(typography.body2.typeface)}(
     fontSize: ${typography.body2.size},
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.25
   ),
   button: GoogleFonts.${lowerCamelCase(typography.button.typeface)}(
     fontSize: ${typography.button.size},
+    fontWeight: FontWeight.w500,
+    letterSpacing: 1.25
   ),
   caption: GoogleFonts.${lowerCamelCase(typography.caption.typeface)}(
     fontSize: ${typography.caption.size},
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.4
   ),
   overline: GoogleFonts.${lowerCamelCase(typography.overline.typeface)}(
     fontSize: ${typography.overline.size},
+    fontWeight: FontWeight.w400,
+    letterSpacing: 1.5
   ),
 )`
 }
