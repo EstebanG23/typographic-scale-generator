@@ -759,7 +759,6 @@ document.querySelector('.copyBtn').addEventListener('click', (e) => {
   input.value = text
   input.style.display="fixed"  // avoid scrolling to bottom and showing input
   input.style.opacity="0"  // visually hide
-  input.style.position="absolute"
   input.style.padding="0"
   input.style.marginBlockStart="-9999999px"
 
@@ -774,6 +773,7 @@ document.querySelector('.copyBtn').addEventListener('click', (e) => {
   if (isSuccessful) {
     // Show successMsg
     successMsg.classList.add('mdc-snackbar--open')
+    input.remove()
     
     // Hide successMsg after 2 seconds
     setTimeout(function () {
