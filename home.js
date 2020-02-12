@@ -605,7 +605,7 @@ function autocomplete2(inp, arr) {
 
               // Scroll body into view when changing body & captions typeface
               // this is a tester for this interaction
-              setTimeout(() => document.querySelector('#overline .value').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'start' }), 250)
+              setTimeout(() => document.querySelector('#overline .value').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }), 250)
           });
           a.appendChild(b);
       }
@@ -670,7 +670,7 @@ function autocomplete2(inp, arr) {
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();
-              setTimeout(() => document.querySelector('#overline .value').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'start' }), 250)
+              setTimeout(() => document.querySelector('#overline .value').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }), 250)
           });
           a.appendChild(b);
         }
