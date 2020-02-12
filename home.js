@@ -761,7 +761,7 @@ document.querySelector('.copyBtn').addEventListener('click', (e) => {
   input.style.opacity="0"  // visually hide
   input.style.position="absolute"
   input.style.padding="0"
-  input.style.width="0"
+  input.style.marginBlockStart="-9999999px"
 
   // Select the text
   input.focus()
