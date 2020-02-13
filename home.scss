@@ -601,3 +601,7 @@ button.copyBtn {
   opacity: 0.6;
   margin-top: 8px;
 }
+
+.mdc-drawer__content {
+  overflow-x: hidden;
+}

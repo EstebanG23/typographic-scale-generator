@@ -755,12 +755,13 @@ document.querySelector('.copyBtn').addEventListener('click', (e) => {
 
   // Add the text to the DOM with a hidden input field
   const input = document.createElement('input')
-  document.body.appendChild(input)
+  document.querySelector('.mdc-drawer__content').appendChild(input)
   input.value = text
   input.style.display="fixed"  // avoid scrolling to bottom and showing input
   input.style.opacity="0"  // visually hide
   input.style.padding="0"
-  input.style.marginBlockStart="-9999999px"
+  input.style.marginLeft="-9999999px"
+  input.style.bottom = "0"
 
   // Select the text
   input.focus()
