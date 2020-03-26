@@ -751,7 +751,7 @@ document.addEventListener("click", function (e) {
 // Copy to clipboard
 document.querySelector('.copyBtn').addEventListener('click', (e) => {
   e.preventDefault()
-  const text = document.querySelector('.code-block').innerHTML
+  const text = document.querySelector('.code-block').textContent
   const successMsg = document.querySelector('.successMsg')
 
   // Add the text to the DOM with a hidden input field
